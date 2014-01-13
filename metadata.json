@@ -1,0 +1,235 @@
+{
+	"name":"Baseplate",
+	"thumbnail":"thumbmail.png",
+	"screenshot":"screenshot.png",
+	"tags": {
+		"en": ["basic", "simple"]
+	},
+	"colorSwatches":
+	{
+		"Swatch 1": {
+			"color1":"#e2e2e2",
+			"color2":"#c6c6c6",
+			"color3":"#ababab",
+			"color4":"#919191",
+			"color5":"#777777",
+			"color6":"#5e5e5e",
+			"color7":"#474747",
+			"color8":"#303030",
+			"color9":"#1b1b1b",
+			"color10":"#000000"
+		},
+		"Swatch 2": {
+			"color1":"#c1ffff",
+			"color2":"#a4f0f6",
+			"color3":"#88d3da",
+			"color4":"#6db8be",
+			"color5":"#529da3",
+			"color6":"#358289",
+			"color7":"#14696f",
+			"color8":"#005157",
+			"color9":"#003940",
+			"color10":"#00242a"
+		},
+		"Swatch 3": {
+			"color1":"#c1ffff",
+			"color2":"#a4f0f6",
+			"color3":"#88d3da",
+			"color4":"#6db8be",
+			"color5":"#529da3",
+			"color6":"#358289",
+			"color7":"#14696f",
+			"color8":"#005157",
+			"color9":"#003940",
+			"color10":"#00242a"
+		},
+		"Swatch 4": {
+			"color1":"#c1ffff",
+			"color2":"#a4f0f6",
+			"color3":"#88d3da",
+			"color4":"#6db8be",
+			"color5":"#529da3",
+			"color6":"#358289",
+			"color7":"#14696f",
+			"color8":"#005157",
+			"color9":"#003940",
+			"color10":"#00242a"
+		},
+		"Swatch 5": {
+			"color1":"#c1ffff",
+			"color2":"#a4f0f6",
+			"color3":"#88d3da",
+			"color4":"#6db8be",
+			"color5":"#529da3",
+			"color6":"#358289",
+			"color7":"#14696f",
+			"color8":"#005157",
+			"color9":"#003940",
+			"color10":"#00242a"
+		},
+		"Swatch 6": {
+			"color1":"#c1ffff",
+			"color2":"#a4f0f6",
+			"color3":"#88d3da",
+			"color4":"#6db8be",
+			"color5":"#529da3",
+			"color6":"#358289",
+			"color7":"#14696f",
+			"color8":"#005157",
+			"color9":"#003940",
+			"color10":"#00242a"
+		},
+		"Swatch 7": {
+			"color1":"#c1ffff",
+			"color2":"#a4f0f6",
+			"color3":"#88d3da",
+			"color4":"#6db8be",
+			"color5":"#529da3",
+			"color6":"#358289",
+			"color7":"#14696f",
+			"color8":"#005157",
+			"color9":"#003940",
+			"color10":"#00242a"
+		},
+		"Swatch 8": {
+			"color1":"#c1ffff",
+			"color2":"#a4f0f6",
+			"color3":"#88d3da",
+			"color4":"#6db8be",
+			"color5":"#529da3",
+			"color6":"#358289",
+			"color7":"#14696f",
+			"color8":"#005157",
+			"color9":"#003940",
+			"color10":"#00242a"
+		},
+		"Swatch 9": {
+			"color1":"#c1ffff",
+			"color2":"#a4f0f6",
+			"color3":"#88d3da",
+			"color4":"#6db8be",
+			"color5":"#529da3",
+			"color6":"#358289",
+			"color7":"#14696f",
+			"color8":"#005157",
+			"color9":"#003940",
+			"color10":"#00242a"
+		},
+		"Swatch 10": {
+			"color1":"#c1ffff",
+			"color2":"#a4f0f6",
+			"color3":"#88d3da",
+			"color4":"#6db8be",
+			"color5":"#529da3",
+			"color6":"#358289",
+			"color7":"#14696f",
+			"color8":"#005157",
+			"color9":"#003940",
+			"color10":"#00242a"
+		}
+	},
+	"fontSwatch": {
+		"title": "Helvetica / Arial",
+		"font1": {
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "42px",
+			"font-weight": "600",
+			"line-height": "36px",
+			"color": "@color-swatch1",
+			"background-color": "@color-swatch1",
+			"background-color-hover": "@color-swatch1",
+			"letter-spacing": "inherit"
+		},
+		"font2": {
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "36px",
+			"font-weight": "600",
+			"line-height": "36px",
+			"color": "@color-swatch2",
+			"background-color": "@color-swatch2",
+			"background-color-hover": "@color-swatch2",
+			"letter-spacing": "inherit"
+		},
+		"font3": {
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "28px",
+			"font-weight": "300",
+			"line-height": "36px",
+			"color": "@color-swatch3",
+			"background-color": "@color-swatch3",
+			"background-color-hover": "@color-swatch3",
+			"letter-spacing": "inherit"
+		},
+		"font4": {
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "26px",
+			"font-weight": "300",
+			"line-height": "36px",
+			"color": "@color-swatch4",
+			"background-color": "@color-swatch4",
+			"background-color-hover": "@color-swatch4",
+			"letter-spacing": "inherit"
+		},
+		"font5": {
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "18px",
+			"font-weight": "300",
+			"line-height": "36px",
+			"color": "@color-swatch5",
+			"background-color": "@color-swatch5",
+			"background-color-hover": "@color-swatch5",
+			"letter-spacing": "inherit"
+		},
+		"font6": {
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "16px",
+			"font-weight": "300",
+			"line-height": "36px",
+			"color": "@color-swatch6",
+			"color-hover": "@color-swatch6",
+			"background-color": "@color-swatch6",
+			"background-color-hover": "@color-swatch6",
+			"letter-spacing": "inherit"
+		},
+		"font7": {
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "10px",
+			"font-weight": "300",
+			"line-height": "36px",
+			"color": "@color-swatch7",
+			"background-color": "@color-swatch7",
+			"background-color-hover": "@color-swatch7",
+			"letter-spacing": "inherit"
+		},
+		"font8": {
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "10px",
+			"font-weight": "300",
+			"line-height": "36px",
+			"color": "@color-swatch8",
+			"background-color": "@color-swatch8",
+			"background-color-hover": "@color-swatch8",
+			"letter-spacing": "inherit"
+		},
+		"font9": {
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "8px",
+			"font-weight": "600",
+			"line-height": "36px",
+			"color": "@color-swatch9",
+			"background-color": "@color-swatch9",
+			"background-color-hover": "@color-swatch9",
+			"letter-spacing": "inherit"
+		},
+		"font10": {
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "14px",
+			"font-weight": "400",
+			"line-height": "36px",
+			"color": "@color-swatch10",
+			"background-color": "@color-swatch10",
+			"background-color-hover": "@color-swatch10",
+			"letter-spacing": "inherit"
+		}
+	}
+}

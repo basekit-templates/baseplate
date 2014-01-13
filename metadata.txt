@@ -1,0 +1,151 @@
+{
+	"name":"Baseplate",
+	"thumbnail":"thumbmail.png",
+	"screenshot":"screenshot.png",
+	"tags": {
+	"en": ["basic", "simple"]
+	},
+	"colorSwatches":
+	{
+		"Swatch 1": {
+			/** Light colour scheme **/
+			"color1":"#ffffff",
+			"color2":"#72d0eb",
+			"color3":"#83c028",
+			"color4":"#2f353e",
+			"color5":"#b4bec7",
+			"color6":"#434f5b",
+			"color7":"#ffffff",
+			"color8":"#ffffff",
+			"color9":"#ffffff",
+			"color10":"#ffffff"
+		},
+		"Swatch 2": {
+			/** Dark colour scheme **/
+			"color1":"#ffffff",
+			"color2":"#72d0eb",
+			"color3":"#83c028",
+			"color4":"#2f353e",
+			"color5":"#b4bec7",
+			"color6":"#434f5b",
+			"color7":"#ffffff",
+			"color8":"#ffffff",
+			"color9":"#ffffff",
+			"color10":"#ffffff"
+		}
+	},
+	"fontSwatch": {
+		"title": "Helvetica / Arial",
+		"font1": {
+			/** H1 font styling **/
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "30px",
+			"font-weight": "500",
+			"line-height": "36px",
+			"color": "@color-swatch1",
+			"background-color": "@color-swatch1",
+			"background-color-hover": "@color-swatch1",
+			"letter-spacing": "inherit"
+		},
+		"font2": {
+			/** H2 font styling **/
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "30px",
+			"font-weight": "500",
+			"line-height": "36px",
+			"color": "@color-swatch2",
+			"background-color": "@color-swatch2",
+			"background-color-hover": "@color-swatch3",
+			"letter-spacing": "inherit"
+		},
+		"font3": {
+			/** H3 font styling **/
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "30px",
+			"font-weight": "500",
+			"line-height": "36px",
+			"color": "@color-swatch3",
+			"background-color": "@color-swatch3",
+			"background-color-hover": "@color-swatch3",
+			"letter-spacing": "inherit"
+		},
+		"font4": {
+			/** H4 font styling **/
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "30px",
+			"font-weight": "500",
+			"line-height": "36px",
+			"color": "@color-swatch4",
+			"background-color": "@color-swatch4",
+			"background-color-hover": "@color-swatch4",
+			"letter-spacing": "inherit"
+		},
+		"font5": {
+			/** H5 font styling **/
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "30px",
+			"font-weight": "500",
+			"line-height": "36px",
+			"color": "@color-swatch5",
+			"background-color": "@color-swatch5",
+			"background-color-hover": "@color-swatch5",
+			"letter-spacing": "inherit"
+		},
+		"font6": {
+			/** H6 font styling **/
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "30px",
+			"font-weight": "500",
+			"line-height": "36px",
+			"color": "@color-swatch6",
+			"color-hover": "@color-swatch6",
+			"background-color": "@color-swatch6",
+			"background-color-hover": "@color-swatch6",
+			"letter-spacing": "inherit"
+		},
+		"font7": {
+			/** P font styling **/
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "30px",
+			"font-weight": "500",
+			"line-height": "36px",
+			"color": "@color-swatch7",
+			"background-color": "@color-swatch7",
+			"background-color-hover": "@color-swatch7",
+			"letter-spacing": "inherit"
+		},
+		"font8": {
+			/** A font styling **/
+			"font-family": "Raleway",
+			"font-size": "30px",
+			"font-weight": "500",
+			"line-height": "36px",
+			"color": "@color-swatch8",
+			"background-color": "@color-swatch8",
+			"background-color-hover": "@color-swatch8",
+			"letter-spacing": "inherit"
+		},
+		"font9": {
+			/** Small font styling **/
+			"font-family": "Raleway",
+			"font-size": "30px",
+			"font-weight": "500",
+			"line-height": "36px",
+			"color": "@color-swatch9",
+			"background-color": "@color-swatch9",
+			"background-color-hover": "@color-swatch9",
+			"letter-spacing": "inherit"
+		},
+		"font10": {
+			/** Magic unicorn font styling **/
+			"font-family": "Raleway",
+			"font-size": "30px",
+			"font-weight": "500",
+			"line-height": "36px",
+			"color": "@color-swatch10",
+			"background-color": "@color-swatch10",
+			"background-color-hover": "@color-swatch10",
+			"letter-spacing": "inherit"
+		}
+	}
+}
