@@ -28,4 +28,26 @@
 	
 	</head>
 	<body class="{{ page.backgroundClass }}">
+	
+	
+	
+		{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}} <p>This is the logo</p>
+		
+		{{widget('companyname', 'companyname', {"business": "Pearl"})|raw}} <p>This is the company name wrapped in a link</p>
+		
+		{{widget('extendednavigation', 'navigationheader', {})|raw}} <p>This is a piece of navigation</p>
+		
+		{{zone('main')|raw}} <p>Insert all the widgets!</p>
+		
+		{{widget('content', 'footercolumn1content1', {"content":"<h2>Lorem Ip Soda</h2><p>Integer a Tortor Dui. Nullam nec ante mi. Morbi sodales urna sit amet mauris elementum quis rutrum lacus gravida. Proin feugia libero quis.</p>"})|raw}} <p>Footer content, title and small paragraph</p>
+		{{widget('content', 'footercolumn2content1', {"content":"<h2>Aliquam Sodales</h2>"})|raw}} <p>Another piece of footer content, just title this time</p>
+		
+		{{widget('profile', 'footercolumn1profilesocialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}} <p>Social links</p>
+		
+		{{widget('profile', 'footercolumn2profiletwitter', { 'profileType':'twitter', 'twitter':'profile'})|raw}} <p>Latest tweets</p>
+		
+		{{widget('profile', 'footercolumn2profilecopyright', { 'profileType':'copyright', 'copyright':'profile'})|raw}} <p>Copyright information</p>
+		
+		
+		
 		<h2>Yes, this is header</h2>
