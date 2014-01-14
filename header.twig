@@ -14,7 +14,9 @@
 			<link rel="icon" href="{{ site.favicon['favicon'] }}" type="image/x-icon" />
 			<link rel="SHORTCUT ICON" href="{{ site.favicon['thumbnail'] }}?v={{ "now"|date("U") }}" type="image/x-icon" />
 		{% endif %}
-	
+		
+		<link rel="stylesheet" href="//{{env.assetDomain}}/templates/common/responsive-columns.css" />
+		
 		<link rel="stylesheet" type="text/css" href="/style.css" />
 		<!--[if IE]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -37,10 +39,14 @@
 		
 		{{widget('extendednavigation', 'navigationheader', {})|raw}} <p>This is a piece of navigation</p>
 		
+		{{widget('extendednavigation', 'topnavigation', {})|raw}} <p>This is another piece of navigation</p>
+		
 		{{zone('main')|raw}} <p>Insert all the widgets!</p>
 		
 		{{widget('content', 'footercolumn1content1', {"content":"<h2>Lorem Ip Soda</h2><p>Integer a Tortor Dui. Nullam nec ante mi. Morbi sodales urna sit amet mauris elementum quis rutrum lacus gravida. Proin feugia libero quis.</p>"})|raw}} <p>Footer content, title and small paragraph</p>
 		{{widget('content', 'footercolumn2content1', {"content":"<h2>Aliquam Sodales</h2>"})|raw}} <p>Another piece of footer content, just title this time</p>
+		
+		{{widget('content', 'headercontent', {"content":"<p>Come in for a coffee then sit and relax on one of our benches outside. We are at 189 Example Street, Austin, XMPL</p>"})|raw}} <p>Header content</p>
 		
 		{{widget('profile', 'footercolumn1profilesocialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}} <p>Social links</p>
 		
@@ -48,6 +54,42 @@
 		
 		{{widget('profile', 'footercolumn2profilecopyright', { 'profileType':'copyright', 'copyright':'profile'})|raw}} <p>Copyright information</p>
 		
+		{{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}} <p>Featured image</p>
 		
+		{% if profile.companydescription|length > 0 %}
+			{{widget('profile', 'footercolumn1profilecompanydescription', { 'profileType':'companydescription', 'companydescription':'profile'})|raw}}
+		{% else %}
+			<p>Nothing</p>
+		{% endif %}
 		
+		{{widget('clicktocall', 'headerclicktocall', {phoneText: '212 6574 6736'})|raw}}
+		
+		{% set menu = plugins.menu %}
+			{{ menu.name }}
+			{% if menu.description is not null %}
+				{{ menu.description }}
+			{% endif %}
+			
+			{% if menu.availability %}
+				{{ menu.availability }}
+			{% endif %}
+			
+			{% if menu.items|length %}
+				{% for item in menu.items %}
+					{% if item.promoted %} This is promoted {% endif %}
+					
+					{{ item.name }}
+					
+					{% if item.imageURL is not null %}
+						{{ item.imageURL }}
+					{% endif %}
+					
+					
+			
+				{% endfor %}
+			
+			{% endif %}
+				
+				
+				
 		<h2>Yes, this is header</h2>
