@@ -17,12 +17,11 @@
 		
 		<link rel="stylesheet" href="//{{env.assetDomain}}/templates/common/responsive-columns.css" />
 		
-		<link rel="stylesheet" type="text/css" href="/style.css" />
 		<!--[if IE]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 	
-		<!-- Includes common template css, responsive columns css. Doesn't seem that important? -->
+		<!-- Includes css files -->
 		{% include basekit.headScript %}
 	
 		<!-- JavaScript files, core stuff that makes sense to be included, should be checked for? -->
@@ -30,6 +29,8 @@
 	
 	</head>
 	<body class="{{ page.backgroundClass }}">
+		
+		<div class="page">
 	
 	
 	
@@ -59,7 +60,7 @@
 		{% if profile.companydescription|length > 0 %}
 			{{widget('profile', 'footercolumn1profilecompanydescription', { 'profileType':'companydescription', 'companydescription':'profile'})|raw}}
 		{% else %}
-			<p>Nothing</p>
+			<p>No description to display</p>
 		{% endif %}
 		
 		{{widget('clicktocall', 'headerclicktocall', {phoneText: '212 6574 6736'})|raw}}
@@ -89,7 +90,3 @@
 				{% endfor %}
 			
 			{% endif %}
-				
-				
-				
-		<h2>Yes, this is header</h2>
