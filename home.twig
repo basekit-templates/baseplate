@@ -1,12 +1,71 @@
 {% include "header.twig" %}
-{#
-<article class="article home-featured">
-{{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
-</article>
-#}
+<section class="page-header home-header">
+{{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('assets/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
+</section>
 
 <section class="page-body home-body">
 	{{zone('main')|raw}}
+
+{#
+{{widget('button', 'button1', {italic: true, text:'button', 'align':'widget-align-center'})|raw}}
+
+{{widget('clicktocall', 'clicktocall1', {phoneText: 'Click to Call'})|raw}}
+
+{{widget('companyaddress', 'companyaddress1', {})|raw}}
+
+{{widget('companyname', 'companyname1', {"business": "My Company Name"})|raw}}
+
+{{widget('contactform', 'contactform1', {'text': 'Submit','formTitle': 'Contact Form', 'email': 'profile'})|raw}}
+
+{{widget('content', 'content1', {content: 'This is a content widget.', lines: 'all'})|raw}}
+
+{{widget('dropbox', 'dropbox1', {'align': 'left', 'showFileName', false})|raw}}
+
+{{widget('extendednavigation', 'extendednavigation1', {"align":"center"})|raw}}
+
+{{widget('facebooklike', 'facebooklike1', {text: 'FaceBook Like', showFaces: 'true', action: 'like', colorscheme: 'light', layout: 'standard', height: '80', font: 'arial', locale: 'en_US', thisUrl: 'www.basekit.com'})|raw}}
+
+{{widget('feature', 'feature1', {"header": "CREATIVE IDEAS. COMMON RESULTS.", "strapline":"GET INVOLVED TODAY. LET US BUILD YOUR FUTURE - THE PEARL WAY.", "buttonText":"Find out more today →","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
+
+{{widget('gallery', 'gallery1', {'images':[{'imageHeight':'350', 'imageWidth':'300', 'url':'http://placehold.it/350x300', 'title':'test title', 'description': 'test desc'},{'imageHeight':'350', 'imageWidth':'300', 'url':'http://placehold.it/350x300', 'title':'test title', 'description': 'test desc'},{'imageHeight':'350', 'imageWidth':'300', 'url':'http://placehold.it/350x300', 'title':'test title', 'description': 'test desc'},{'imageHeight':'350', 'imageWidth':'300', 'url':'http://placehold.it/350x300', 'title':'test title', 'description': 'test desc'}]})|raw}}
+
+{{widget('image', 'image1', { 'src': asset('furcoat/images/my-image.jpg'), 'title': 'my image', 'alt': 'my image', 'fileName': 'my-image.jpg', 'fileSize': '58kb', 'imageSize': '440 x 660', 'imageWidth': '90px'})|raw}}
+
+{{widget('line', 'line1', {'thickness': 'inherit', 'padding': 'inherit', 'length':'inherit', 'align': 'center'})|raw}}
+
+{{widget('linkedincompanyprofile', 'linkedincompanyprofile1', {'source': 'companyname', 'companyName': 'BaseKit'})|raw}}
+
+{{widget('linkedinprofile', 'linkedinprofile1', {'linkedin': 'http://www.linkedin.com/in/johndoe'})|raw}}
+
+{{widget('logo', 'logo1', {"defaultlogo": asset('images/logo.png')})|raw}}
+
+{{widget('map', 'map1', {'height': '150', 'zoom': '15', 'address': 'profile'})|raw}}
+
+{{widget('navigation', 'navigation1', {'align': 'left'})|raw}}
+
+{{widget('profile', 'profile1', { 'profileType':'twitter', 'twitter':'profile', 'refreshtime':'1800000'})|raw}}
+
+{{widget('redirecttodesktop', 'redirecttodesktop1', {'text': 'Go to desktop version'})|raw}}
+
+{{widget('responsivecolumns', 'responsivecolumns1', {})|raw}}
+
+{{widget('signupform', 'signupform1', {'text': 'Send', 'label': 'Your Email', 'formTitle': 'Signup Form', 'email': 'profile'})|raw}}
+
+{{widget('socialicons', 'socialicons1', {'googleplus': 'https://plus.google.com/101946323226233111530', 'linkedin':'http://www.linkedin.com/company/basekit', 'facebook': 'https://www.facebook.com/TeamBaseKit', 'twitter': 'https://twitter.com/basekit', 'youtube': 'https://www.youtube.com/user/TeamBaseKit', 'rss': 'http://blogdiseno.basekit.es/feed/'})|raw}}
+
+{{widget('responsiveslideshow', 'responsiveslideshow1', {'duration':'3', 'transSpeed': '1000', 'transType': 'fade', 'showButtons': true, 'showBullets': false, 'allowPause': true, 'allowLoop': true, 'images':[{'imageHeight':'350', 'imageWidth':'300', 'url':'http://placehold.it/350x300', 'title':'test title', 'description': 'test desc'},{'imageHeight':'350', 'imageWidth':'300', 'url':'http://placehold.it/350x300', 'title':'test title', 'description': 'test desc'},{'imageHeight':'350', 'imageWidth':'300', 'url':'http://placehold.it/350x300', 'title':'test title', 'description': 'test desc'},{'imageHeight':'350', 'imageWidth':'300', 'url':'http://placehold.it/350x300', 'title':'test title', 'description': 'test desc'}]})|raw}}
+
+{{widget('space', 'space1', {'height': '50'})|raw}}
+
+{{widget('tweet', 'tweet1', {'linkText': 'Tweet'})|raw}}
+
+{{widget('twitter', 'twitter1', {'searchKey': 'basekit', 'searchType': 'username', 'count': '3','refreshTime': '1800000','includeRts': '0'})|raw}}
+
+{{widget('userregistration', 'userregistration1', {'text': 'Register', 'align': 'widget-align-center'})|raw}}
+
+{{widget('youtube', 'youtube1', {'videoId': 'j9Hjrs6WQ8M', 'userInput': '<iframe src="http://www.youtube.com/embed/j9Hjrs6WQ8M" frameborder="0" allowfullscreen></iframe>'})|raw}}
+#}
+
 </section>
 
 {% include "footer.twig" %}

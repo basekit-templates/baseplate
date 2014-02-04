@@ -26,67 +26,20 @@
 	
 		<!-- JavaScript files, core stuff that makes sense to be included, should be checked for? -->
 		{% include basekit.bodyScript %}
-	
 	</head>
 	<body class="{{ page.backgroundClass }}">
-		
-		<div class="page">
-	
-	
-	
-		{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}} <p>This is the logo</p>
-		
-		{{widget('companyname', 'companyname', {"business": "Pearl"})|raw}} <p>This is the company name wrapped in a link</p>
-		
-		{{widget('extendednavigation', 'navigationheader', {})|raw}} <p>This is a piece of navigation</p>
-		
-		{{widget('extendednavigation', 'topnavigation', {})|raw}} <p>This is another piece of navigation</p>
-		
-		{{zone('main')|raw}} <p>Insert all the widgets!</p>
-		
-		{{widget('content', 'footercolumn1content1', {"content":"<h2>Lorem Ip Soda</h2><p>Integer a Tortor Dui. Nullam nec ante mi. Morbi sodales urna sit amet mauris elementum quis rutrum lacus gravida. Proin feugia libero quis.</p>"})|raw}} <p>Footer content, title and small paragraph</p>
-		{{widget('content', 'footercolumn2content1', {"content":"<h2>Aliquam Sodales</h2>"})|raw}} <p>Another piece of footer content, just title this time</p>
-		
-		{{widget('content', 'headercontent', {"content":"<p>Come in for a coffee then sit and relax on one of our benches outside. We are at 189 Example Street, Austin, XMPL</p>"})|raw}} <p>Header content</p>
-		
-		{{widget('profile', 'footercolumn1profilesocialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}} <p>Social links</p>
-		
-		{{widget('profile', 'footercolumn2profiletwitter', { 'profileType':'twitter', 'twitter':'profile'})|raw}} <p>Latest tweets</p>
-		
-		{{widget('profile', 'footercolumn2profilecopyright', { 'profileType':'copyright', 'copyright':'profile'})|raw}} <p>Copyright information</p>
-		
-		{{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}} <p>Featured image</p>
-		
-		{% if profile.companydescription|length > 0 %}
-			{{widget('profile', 'footercolumn1profilecompanydescription', { 'profileType':'companydescription', 'companydescription':'profile'})|raw}}
-		{% else %}
-			<p>No description to display</p>
-		{% endif %}
-		
-		{{widget('clicktocall', 'headerclicktocall', {phoneText: '212 6574 6736'})|raw}}
-		
-		{% set menu = plugins.menu %}
-			{{ menu.name }}
-			{% if menu.description is not null %}
-				{{ menu.description }}
-			{% endif %}
+		<div class="container">
+			<header class="header row">
+				<div class="span-6 logo">
+					{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+					{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+				</div>
+				<div class="span-6 strapline">
+
+				</div>
+				<nav class="span-12 navigation">
+					{{widget('extendednavigation', 'navigationheader', {})|raw}}
+				</nav>
+			</header>
+			<div class="page">
 			
-			{% if menu.availability %}
-				{{ menu.availability }}
-			{% endif %}
-			
-			{% if menu.items|length %}
-				{% for item in menu.items %}
-					{% if item.promoted %} This is promoted {% endif %}
-					
-					{{ item.name }}
-					
-					{% if item.imageURL is not null %}
-						{{ item.imageURL }}
-					{% endif %}
-					
-					
-			
-				{% endfor %}
-			
-			{% endif %}
