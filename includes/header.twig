@@ -27,15 +27,15 @@
 	</head>
 	<body class="{{ page.backgroundClass }}">
 		<div class="container">
-			<header class="header row">
-				<div class="span-6 logo">
+			<header class="header">
+				<div class="logo">
 					{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
 					{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
 				</div>
-				<div class="span-6 strapline">
+				<div class="strapline">
 
 				</div>
-				<nav class="span-12 navigation">
+				<nav class="navigation">
 					{{widget('extendednavigation', 'navigationheader', {})|raw}}
 				</nav>
 			</header>

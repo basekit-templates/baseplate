@@ -1,7 +1,8 @@
-{% include "header.twig" %}
+{% extends "layout.twig" %}
+{% block content %}
 
 <section class="page-body default-body">
 	{{zone('main')|raw}}
 </section>
 
-{% include "footer.twig" %}
+{% endblock %}

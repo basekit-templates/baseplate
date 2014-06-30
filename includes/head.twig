@@ -1,0 +1,17 @@
+<meta charset="utf-8" />
+<title>{{ page.title }}</title>
+
+<meta name="keywords" content="{{ page.keywords }}" />
+<meta name="description" content="{{ page.description }}" />
+<meta http-equiv="content-language" content="{{ page.seoLang }}" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+{% if site.favicon %}
+	<link rel="icon" href="{{ site.favicon['favicon'] }}" type="image/x-icon" />
+	<link rel="SHORTCUT ICON" href="{{ site.favicon['thumbnail'] }}?v={{ "now"|date("U") }}" type="image/x-icon" />
+{% endif %}
+
+<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
