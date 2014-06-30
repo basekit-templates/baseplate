@@ -22,7 +22,7 @@
 			"font-size": "42px",
 			"font-weight": "inherit",
 			"line-height": "36px",
-			"color": "@color-swatch1",
+			"color": "@color-swatch4",
 			"letter-spacing": "inherit"
 		},
 		"font2": {
@@ -30,7 +30,7 @@
 			"font-size": "36px",
 			"font-weight": "inherit",
 			"line-height": "36px",
-			"color": "@color-swatch2",
+			"color": "@color-swatch4",
 			"letter-spacing": "inherit"
 		},
 		"font3": {
@@ -38,7 +38,7 @@
 			"font-size": "28px",
 			"font-weight": "inherit",
 			"line-height": "36px",
-			"color": "@color-swatch3",
+			"color": "@color-swatch4",
 			"letter-spacing": "inherit"
 		},
 		"font4": {
@@ -63,9 +63,9 @@
 			"font-weight": "inherit",
 			"line-height": "36px",
 			"color": "@color-swatch6",
-			"color-hover": "@color-swatch6",
-			"background-color": "@color-swatch6",
-			"background-color-hover": "@color-swatch6",
+			"color-hover": "darken(@color-swatch6, 10%)",
+			"background-color": "@color-swatch1",
+			"background-color-hover": "darken(@color-swatch1, 10%)",
 			"letter-spacing": "inherit"
 		},
 		"font7": {
@@ -74,8 +74,8 @@
 			"font-weight": "inherit",
 			"line-height": "36px",
 			"color": "@color-swatch1",
-			"background-color": "@color-swatch7",
-			"background-color-hover": "@color-swatch7",
+			"background-color": "@color-swatch3",
+			"background-color-hover": "darken(@color-swatch3, 10%)",
 			"letter-spacing": "inherit"
 		},
 		"font8": {
