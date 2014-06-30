@@ -9,18 +9,20 @@
 
 	<body class="{{ page.backgroundClass }} {{ site.colorSwatch }}">
 
-		{% include "includes/header.twig" %}
+		<div class="container">
 
+			{% include "includes/header.twig" %}
 
-		<div class="page-wrap">
+			<main class="template-main">
 
-			{% block content %}
-			{% endblock %}
+				{% block content %}
+				{% endblock %}
+
+			</main>
 
 			{% include "includes/footer.twig" %}
 
 		</div>
-
 
 		<script type="text/javascript">
 			!function() {
