@@ -1,4 +1,4 @@
-basekit-baseplate
-=================
+baseplate
+=========
 
-An essentials template for BaseKit development
+BaseKit Baseplate Template
