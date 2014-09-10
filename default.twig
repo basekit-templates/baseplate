@@ -35,6 +35,8 @@
 		<!-- Page Content -->
 		<section class="content">
 
+			<!-- Template Widgets -->
+
 			{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
 
 			{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
@@ -42,6 +44,8 @@
 			{{widget('navigation', 'navigation', {"align":"left"})|raw}}
 
 			{{widget('feature', 'featurehome', {"header": "profile", "defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': false})|raw}}
+			
+			<!-- End Template Widgets -->
 
 			<!-- Main Widet Zone -->
 		   	{{zone('main')|raw}}
