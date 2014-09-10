@@ -1,61 +1,32 @@
-<!doctype html>
-<!--[if lt IE 7]>
-	<html class="no-js ie6 oldie" lang="en">
-<![endif]-->
-<!--[if IE 7]>
-	<html class="no-js ie7 oldie" lang="en">
-<![endif]-->
-<!--[if IE 8]>
-	<html class="no-js ie8 oldie" lang="en">
-<![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="{{ page.seoLang }}">
-<!--<![endif]-->
-<head>
-	<meta charset="utf-8" />
-	<title>{{ page.title }}</title>
-	<meta name="keywords" content="{{ page.keywords }}" />
-	<meta name="description" content="{{ page.description }}" />
-	<meta http-equiv="content-language" content="{{ page.seoLang }}" />
+{% extends "layout.twig" %}
 
-	{% if site.favicon %}
-		<link rel="icon" href="{{ site.favicon['favicon'] }}" type="image/x-icon" />
-		<link rel="SHORTCUT ICON" href="{{ site.favicon['thumbnail'] }}?v={{ "now"|date("U") }}" type="image/x-icon" />
-	{% endif %}
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
+{% block content %}
 
-	{% include basekit.headScript %}
-</head>
-<body class="{{ page.backgroundClass }}">
+<!-- Container -->
+<div class="container">
 
-	<!-- Container -->
-	<div class="container">
-	
-		<!-- Page Content -->
-		<section class="content">
+	<!-- Page Content -->
+	<section class="content">
 
-			<!-- Template Widgets -->
+		<!-- Template Widgets -->
 
-			{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+		{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
 
-			{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+		{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
 
-			{{widget('navigation', 'navigation', {"align":"left"})|raw}}
+		{{widget('navigation', 'navigation', {"align":"left"})|raw}}
 
-			{{widget('feature', 'featurehome', {"header": "profile", "defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': false})|raw}}
-			
-			<!-- End Template Widgets -->
+		{{widget('feature', 'featurehome', {"header": "profile", "defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': false})|raw}}
+		
+		<!-- End Template Widgets -->
 
-			<!-- Main Widet Zone -->
-		   	{{zone('main')|raw}}
+		<!-- Main Widet Zone -->
+	   	{{zone('main')|raw}}
 
-		</section>
-		<!-- End Page Content -->
+	</section>
+	<!-- End Page Content -->
 
-	</div>
-	<!-- End Container -->
+</div>
+<!-- End Container -->
 
-    {% include basekit.bodyScript %}
-</body>
-</html>
+{% endblock %}
