@@ -1,0 +1,145 @@
+// --------------------------------
+// BaseKit Baseplate: CSS > Widgets
+// --------------------------------
+
+// 1. #IMAGES
+// 2. #GALLERY
+// 3. #SLIDESHOW
+
+
+// -----------------------------
+// 1. #Images
+// -----------------------------
+
+// Image Captions
+// --------------
+
+// Gallery & Slideshow
+.image-title,
+.image-description {
+    color: @color-swatch1;
+}
+
+// Image Widget
+.image-widget__image-title,
+.image-widget__image-description {
+    color: @font-swatch5-color;
+}
+
+
+
+
+// -----------------------------
+// 2. #Gallery
+// -----------------------------
+
+// Gallery Layout
+// --------------
+
+// Gallery List
+.gallery-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;     
+}
+
+// Gallery Item
+.gallery-item {
+    position: relative;
+    width: 32%;
+    margin-bottom: 2%;
+    // Display 100% at mobile
+    @media @mobile {
+        width: 100%;
+        margin-bottom: 4%;
+    }
+}
+
+
+// Gallery Images
+// --------------
+
+// Use Background-image Method
+.image-gallery__image-link {
+    display: block;
+    height: 280px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @media @tablet {
+        height: 210px;
+    }
+    &:hover {
+        transition: all .2s ease-in-out;
+    }
+}
+
+// Hide Img Element
+.image-gallery__image {
+    display: none;
+}
+
+
+// Gallery Image Captions
+// ----------------------
+
+// Hide Caption
+.image-gallery__caption {
+    display: none;
+    margin: 0;
+    padding: 20px;
+    background-color: hsla(hue(@color-swatch7), saturation(@color-swatch7), lightness(@color-swatch7), 0.8); 
+}
+
+// Show Caption
+.image-link:hover .image-gallery__caption {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+// -----------------------------
+// 3. #Slideshow
+// ----------------------------- 
+
+// Slideshow Layout
+// ----------------
+
+// Slideshow Height
+.slideshow, .slideshow__figure {
+    position: relative;
+    min-height: 400px;
+}
+
+
+// Slideshow Images
+// ----------------
+
+// Use Background-image Method
+.slideshow__figure {
+    background-size: cover;
+    background-position: center;
+}
+// Hide Img Element
+.slideshow__image {
+    display: none;
+}
+
+
+// Slideshow Image Captions
+// ------------------------
+
+.slideshow__caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+}
+
+
+
+
