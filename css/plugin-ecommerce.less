@@ -1,0 +1,122 @@
+// ------------------------------------------
+// BaseKit Baseplate: CSS > Plugin: Ecommerce
+// ------------------------------------------
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+// 1. #PRODUCT FILTERS 
+// 2. #PRODUCT LIST LAYOUT
+// 3. #PRODUCT IMAGES
+// 4. #BASKET WIDGET
+
+
+// -----------------------------
+// 1. #Product Filters
+// -----------------------------
+
+select {
+	height: 36px;
+	outline: none;
+	border: 1px solid darken(@color-swatch1,15%);
+	border-radius: 0;
+	background-color: @color-swatch1;
+	text-indent: 0;
+	&:hover, &:focus {
+		background-color: @color-swatch1;
+		cursor: pointer;
+	}
+}
+
+
+
+
+// -----------------------------
+// 2. #Product List Layout
+// -----------------------------
+
+// Product List
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;     
+}
+
+// Product Item
+.product-item {
+    position: relative;
+    width: 32%;
+    margin-bottom: 2%;
+    // Display 100% at mobile
+    @media @mobile {
+        width: 100%;
+        margin-bottom: 4%;
+    }
+}
+
+
+// -----------------------------
+// 3. #Product Images
+// -----------------------------
+
+// Product & Basket Images **
+// --------------------------
+
+// ** Centering Techique
+
+// Surrounding image divs 
+.product-item-image,
+.basket-item-image {
+    background-color: darken(@color-swatch1,5%);
+    text-align: center; // Horizontally centers image
+    overflow: hidden; // Stops large images overflowing
+}
+// Image Element
+.product-listing__image,
+.basket__image {
+    vertical-align: middle; // Vertically centers image
+    max-width: 100%; // Allows image to fill the width or height
+    max-height: 100%;
+}
+
+// Product Images: sets width and height
+.product-item-image { 
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    line-height: 200px; // Line height matches div height
+}
+
+// Basket Images: sets width and height
+.basket-item-image {
+    width: 100px;
+    height: 100px;
+    line-height: 100px; // Line height matches div height
+}
+
+
+
+
+// -----------------------------
+// 4. #Basket Widget
+// -----------------------------
+
+// Display basket image and content inline
+.basket-item-image,
+.basket-item-details {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+}
+
+// Remove icon spacing
+.item-remove:before {
+    margin-right: 0;
+}
+// Hide button text
+.remove-text { 
+    display: none;
+}
+
+
