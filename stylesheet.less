@@ -1,4 +1,6 @@
+// --------------------------------
 // BaseKit Baseplate Template (v1.0)
+// --------------------------------
 
 // -----------------------------
 // #Table of Contents
@@ -7,6 +9,8 @@
 // 1. #LESS INCLUDES
 // 2. #PAGE SETTINGS
 // 3. #TEMPLATE STYLES
+
+
 
 
 // -----------------------------
@@ -19,7 +23,12 @@
 // to guarentee widgets come to life. Proivides default styles for all widgets. Uncomment to activate.
 
 @import "@{templateLocal}/css/widgets.less"; // Widgets CSS
-@import "@{templateLocal}/css/plugin-menu.less"; // Plugin: Menu CSS
+
+// Plugins
+@import "@{templateLocal}/css/plugin-menu.less"; // Menu
+@import "@{templateLocal}/css/plugin-ecommerce.less"; // Ecommerce
+
+
 
 
 // -----------------------------
@@ -35,12 +44,22 @@
     width: 90%;
     margin: 0 5%;
     @media only screen and (min-width: 1140px) {
+<<<<<<< HEAD
     	width: 960px; // 1140px - 10% for margins
 		margin: 0 auto;
 	}
+=======
+    	width: 960px;
+    	margin: 0 auto;
+    }
+>>>>>>> 657811ac2155d8123ad520a556a1c5b9658aeb20
 }
+
+
 
 
 // -----------------------------
 // 3. #Template Styles
 // -----------------------------
+
+
