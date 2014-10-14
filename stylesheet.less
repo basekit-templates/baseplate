@@ -28,11 +28,16 @@
 
 // ** Styles for advanced Baseplate template - remove when developing a custom template
 
-// Page Container
+// Page Container 
+// --------------
+
 .container {
-	max-width: 960px;
-	margin: 0 auto;
-	padding: 50px 0 0;
+    width: 90%;
+    margin: 0 5%;
+    @media only screen and (min-width: 1140px) {
+    	width: 960px; // 1140px - 10% for margins
+		margin: 0 auto;
+	}
 }
 
 
