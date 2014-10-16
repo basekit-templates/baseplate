@@ -1,0 +1,54 @@
+// ---------------------------------------
+// BaseKit Baseplate: CSS > Plugin: Images
+// ---------------------------------------
+
+// ------------------------------
+// Image Centering Technique
+// ------------------------------
+
+// Blog Item, Product List Item
+// ----------------------------
+
+// Surrounding image divs 
+.post-image,
+.product-item-image,
+.basket-item-image {
+    width: 100%;
+    background-color: darken(@color-swatch1,5%);
+    overflow: hidden; // Stops large images overflowing
+}
+// Image Element
+.product-listing__image,
+.basket__image,
+.blog-post-list__image,
+.blog-post__image {
+    vertical-align: middle; // Vertically centers image
+    max-width: 100%; // Allows image to fill the width or height
+    max-height: 100%;
+}
+
+
+// Product Image
+// ---------------
+
+// Sets height
+.product-item-image,
+.basket-item-image {
+    height: 200px;
+    line-height: 200px; // Line height matches div height
+}
+
+
+// Blog Image
+// ----------
+
+// Sets height
+.post-image {
+    height: 300px;
+    line-height: 300px; // Line height matches div height
+    // Reduces height at tablet
+    @media @tablet {
+        height: 200px;
+        line-height: 200px;
+    }
+}
