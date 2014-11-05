@@ -1,6 +1,7 @@
 {
     "name": "basekit-baseplate",
     "thumbnail": "thumbnail.png",
+    "templateType":"standard",
     "colorSwatches":
     {
         "Swatch 1": {
