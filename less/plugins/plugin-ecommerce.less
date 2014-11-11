@@ -6,33 +6,23 @@
 // #Table of Contents
 // -----------------------------
 
-// 1. #PRODUCT FILTERS 
-// 2. #PRODUCT LIST LAYOUT
+// 1. #SINGLE PRODUCT
+// 2. #PRODUCT LIST
 // 3. #BASKET WIDGET
+// 4. #BASKET SUMMARY
 
 
-// -----------------------------
-// 1. #Product Filters
-// -----------------------------
+// -------------------------------
+// 1. #Single Product
+// -------------------------------
 
-select {
-	height: 36px;
-	outline: none;
-	border: 1px solid darken(@color-swatch1,15%);
-	border-radius: 0;
-	background-color: @color-swatch1;
-	text-indent: 0;
-	&:hover, &:focus {
-		background-color: @color-swatch1;
-		cursor: pointer;
-	}
-}
+// No styles here...
 
 
 
 
 // -----------------------------
-// 2. #Product List Layout
+// 2. #Product List
 // -----------------------------
 
 // Product List
@@ -61,20 +51,52 @@ select {
 // 3. #Basket Widget
 // -----------------------------
 
+.basket__basket-item { position: relative; }
+.basket__item-image  { width: 200px; }
+
 // Display basket image and content inline
 .basket-item-image,
 .basket-item-details {
     display: inline-block;
     vertical-align: top;
     margin-right: 20px;
+    @media @tablet {
+        width: 100%;
+        margin-right: 0;
+    }
 }
 
-// Remove icon spacing
-.item-remove:before {
-    margin-right: 0;
+// Item Remove Button
+.item-remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    // Remove icon spacing
+    &:before {
+        margin-right: 0;
+    }
 }
 // Hide button text
 .remove-text { 
     display: none;
 }
+
+// Basket Image
+.basket__image {
+    max-height: 200px;
+    max-width: 200px;
+    @media @mobile {
+        max-height: inherit;
+    }
+}
+
+
+
+
+// -------------------------------
+// 4. #Basket Widget
+// -------------------------------
+
+// No styles here...
 
