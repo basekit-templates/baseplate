@@ -17,46 +17,24 @@
 // 1. #LESS Includes
 // -----------------------------
 
-@import "@{templateCommon}/bk-less-framework.less"; // BaseKit LESS Framework
+@import "@{templateCommon}/bk-less-framework.less"; // BaseKit LESS Framework **
 
 // ** BaseKit LESS Framework is a set of non obtrusive LESS files that can be pulled into
 //    your template to guarentee widgets come to life. Proivides default styles for all widgets.
 
-// Template Includes
+
+// Theme Includes
+// --------------
+
 @import "@{templateLocal}/less/theme.less"; // Theme
+@import "@{templateLocal}/less/typography.less"; // Typography
 @import "@{templateLocal}/less/widgets.less"; // Widgets
 
+
 // Plugin Includes
+// ---------------
+
 @import "@{templateLocal}/less/plugins/plugin-blog.less"; // Plugin: Blog CSS
 @import "@{templateLocal}/less/plugins/plugin-menu.less"; // Plugin: Menu CSS
 @import "@{templateLocal}/less/plugins/plugin-ecommerce.less"; // Plugin: Ecommerce CSS
-
-
-
-
-// -----------------------------
-// 2. #Page Settings **
-// -----------------------------
-
-// ** Styles for advanced Baseplate template - remove when developing a custom template
-
-// Page Container
-// --------------
-
-.container {
-    width: 90%;
-    margin: 0 5%;
-    @media only screen and (min-width: 1140px) {
-    	width: 960px; // 1140px - 10% for margins
-		margin: 0 auto;
-	}
-}
-
-
-
-
-// -----------------------------
-// 3. #Template Styles
-// -----------------------------
-
 

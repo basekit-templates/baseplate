@@ -8,16 +8,34 @@
 // -----------------------------
 
 
-// 1. #HEADER
-// 2. #FOOTER
-// 3. #TYPOGRAPHY
+// 1. #PAGE CONTAINER
+// 2. #HEADER
+// 3. #FOOTER
 // 4. #FORMS
 
 
 
 
 // -----------------------------
-// 1. #Header
+// 1. #Page Container **
+// -----------------------------
+
+// ** Styles for Advanced Baseplate Theme - remove / edit when developing a custom theme
+
+.container {
+    width: 90%;
+    margin: 0 5%;
+    @media only screen and (min-width: 1140px) {
+    	width: 960px; // 1140px - 10% for margins
+		margin: 0 auto;
+	}
+}
+
+
+
+
+// -----------------------------
+// 2. #Header
 // -----------------------------
 
 .theme-header {
@@ -28,58 +46,12 @@
 
 
 // -----------------------------
-// 2. #Footer
+// 3. #Footer
 // -----------------------------
 
 .theme-footer {
     // Add styles here
 }
-
-
-
-
-// -----------------------------
-// 3. #Typography
-// -----------------------------
-
-// Colour Swatches
-// ---------------
-
-// @color-swatch1: Background
-// @color-swatch2: Contrast
-// @color-swatch3: Buttons
-// @color-swatch4: Headings
-// @color-swatch5: Paragraph
-// @color-swatch6: Navigation Links
-// @color-swatch7: Spare
-
-
-// Colour Variables
-// ----------------
-
-@bg-color: @color-swatch1;          // Background
-@contrast-color: @color-swatch2;    // Contrast Colour
-@button-color: @color-swatch3;      // Button BG Colour
-@heading-color: @color-swatch4;     // Heading Text Colour (H1 - H4)
-@paragraph-color: @color-swatch5;   // Paragraph Text Colour
-@nav-color: @color-swatch6;         // Nav Link Colour
-@spare-color: @color-swatch7;       // Spare Colour
-
-
-// Font Swatches
-// -------------
-
-// font1:  Heading 1
-// font2:  Heading 2
-// font3:  Heading 3
-// font4:  Heading 4
-// font5:  Paragraph
-// font6:  Navigation Link
-// font7:  Buttons
-// font8:  Feature Headline
-// font9:  Feature Strapline
-// font10: Company Name (Logo)
-
 
 
 
@@ -92,8 +64,3 @@ form,
 .form {
     // Add styles here
 }
-
-
-
-
-
