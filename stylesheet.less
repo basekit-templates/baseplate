@@ -11,22 +11,25 @@
 
 @import "@{templateCommon}/bk-less-framework.less";
 
-// ** BaseKit LESS Framework is a set of non obtrusive LESS files that can be pulled into
-//    your template to guarentee widgets come to life. Proivides default styles for all widgets.
+// BaseKit LESS Framework is a set of non-obtrusive LESS files 
+// providing CSS resets and basic styling for widgets, typography, forms etc; 
+// it also includes font icons and other theme settings.
 
 
 // Theme Includes
 // --------------
 
-@import "@{templateLocal}/less/theme.less"; // Theme
+@import "@{templateLocal}/less/typography.less"; // Colours
 @import "@{templateLocal}/less/typography.less"; // Typography
-@import "@{templateLocal}/less/widgets.less"; // Widgets
+
+@import "@{templateLocal}/less/theme.less";      // Theme
+@import "@{templateLocal}/less/widgets.less";    // Widgets
 
 
 // Plugin Includes
 // ---------------
 
-@import "@{templateLocal}/less/plugins/plugin-blog.less"; // Plugin: Blog CSS
-@import "@{templateLocal}/less/plugins/plugin-menu.less"; // Plugin: Menu CSS
+@import "@{templateLocal}/less/plugins/plugin-blog.less";      // Plugin: Blog CSS
+@import "@{templateLocal}/less/plugins/plugin-menu.less";      // Plugin: Menu CSS
 @import "@{templateLocal}/less/plugins/plugin-ecommerce.less"; // Plugin: Ecommerce CSS
 
