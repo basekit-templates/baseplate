@@ -1,4 +1,6 @@
-basekit-baseplate
-=================
+Copyright 2014 BaseKit Platform Ltd
 
-An essentials template for BaseKit development
+baseplate
+=========
+
+BaseKit Baseplate Template
