@@ -25,7 +25,7 @@
 			"defaultBgImg": asset('images/feature-bg.jpg'),
 			'positionTopPercentage': '0',
 			'showBtn': true,
-			buttonText: "Lorem Ipsum"
+			buttonText: "Button text"
 		})|raw}}
 	</header>
 	<!-- End Header Content -->
@@ -39,7 +39,10 @@
 	<!-- Footer Content (Template Widgets) -->
 	<footer class="template-footer">
 
-
+		{{widget('profile', 'footercopyright', {
+			"profileType": "copyright",
+			"copyright": "Copyright &copy;"
+		})|raw}}
 
 	</footer>
 
