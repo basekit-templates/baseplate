@@ -35,7 +35,9 @@
 	<div class="container">
 	
 		<header class="header">
-			{{widget('content','headercontent',{})|raw}}
+			{{widget('logo', 'headerlogo', {"defaultlogo": asset('images/logo.png')})|raw}}
+			{{widget('extendednavigation', 'headernavigation', {"align":"left"})|raw}}
+			{widget('feature', 'headerfeature', {"header": "Header Text", "strapline":"Strapline text", "buttonText":"Button text","defaultBgImg": asset('images/feature.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
 		</header>
 	
 		<!-- Page Content -->
@@ -55,7 +57,6 @@
 			<section class="main-zone">
 
 				<!-- Uncomment zone to display widgets -->
-				{{zone('main')|raw}}
 				{{zone('main')|raw}}
 
 			</section>
