@@ -1,56 +1,48 @@
-{# Copyright 2014 BaseKit Platform Ltd #}
-{# Copyright 2014 BaseKit Platform Ltd #}
-<!doctype html>
-<!--[if lt IE 7]>
-	<html class="no-js ie6 oldie" lang="en">
-<![endif]-->
-<!--[if IE 7]>
-	<html class="no-js ie7 oldie" lang="en">
-<![endif]-->
-<!--[if IE 8]>
-	<html class="no-js ie8 oldie" lang="en">
-<![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="{{ page.seoLang }}">
-<!--<![endif]-->
-<head>
-	<meta charset="utf-8" />
-	<title>{{ page.title }}</title>
-	<meta name="keywords" content="{{ page.keywords }}" />
-	<meta name="description" content="{{ page.description }}" />
-	<meta http-equiv="content-language" content="{{ page.seoLang }}" />
+{% extends "layout.twig" %}
 
-	{% if site.favicon %}
-		<link rel="icon" href="{{ site.favicon['favicon'] }}" type="image/x-icon" />
-		<link rel="SHORTCUT ICON" href="{{ site.favicon['thumbnail'] }}?v={{ "now"|date("U") }}" type="image/x-icon" />
-	{% endif %}
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
+{% block content %}
 
-	{% include basekit.headScript %}
-</head>
-<body class="{{ page.backgroundClass }}">
+<!-- Container -->
+<div class="template-container">
 
-	<!-- Container -->
-	<div class="container">
-	
-		<!-- Header Content (Template Widgets) -->
-		<header class="header">
-			{{widget('logo', 'headerlogo', {"defaultlogo": asset('images/logo.png')})|raw}}
-			{{widget('extendednavigation', 'headernavigation', {"align":"left"})|raw}}
-			{{widget('feature', 'headerfeature', {"header": "Header Text", "strapline":"Strapline text", "buttonText":"Button text","defaultBgImg": asset('images/feature.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
-		</header>
-		<!-- End Header Content -->
-		
-		<!-- Page Content (Zone Widgets) -->
-		<section class="main-zone">
-			{{zone('main')|raw}}
-		</section>
-		<!-- End Page Content -->
+	<!-- Header Content (Template Widgets) -->
+	<header class="template-header">
+		{{widget('logo', 'headerlogo', {
+			"defaultlogo": asset('images/logo.png')
+		})|raw}}
 
-	</div>
-	<!-- End Container -->
+		{{widget('companyname', 'companyname', {
+			"business": "profile"
+		})|raw}}
 
-{% include basekit.bodyScript %}
-</body>
-</html>
+		{{widget('extendednavigation', 'headernavigation', {
+			"align":"left"
+		})|raw}}
+
+		{{widget('feature', 'headerfeature', {
+			"header": "profile",
+			"defaultBgImg": asset('images/feature-bg.jpg'),
+			'positionTopPercentage': '0',
+			'showBtn': true,
+			buttonText: "Lorem Ipsum"
+		})|raw}}
+	</header>
+	<!-- End Header Content -->
+
+	<!-- Page Content (Zone Widgets) -->
+	<main class="template-main">
+		{{zone('main')|raw}}
+	</main>
+	<!-- End Page Content -->
+
+	<!-- Footer Content (Template Widgets) -->
+	<footer class="template-footer">
+
+
+
+	</footer>
+
+</div>
+<!-- End Container -->
+
+{% endblock %}
