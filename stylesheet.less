@@ -1,48 +1,35 @@
-// BaseKit Baseplate Template (v1.0)
+// ------------------------------------------
+// BaseKit Baseplate Theme (v1.0): Stylesheet
+// ------------------------------------------
 
 // -----------------------------
-// #Table of Contents
+// #LESS Includes
 // -----------------------------
 
-// 1. #LESS INCLUDES
-// 2. #PAGE SETTINGS
-// 3. #TEMPLATE STYLES
+// BK LESS Framework Include
+// -------------------------
+
+@import "@{templateCommon}/bk-less-framework.less";
+// @import "@{templateCommon}/bk-less-framework/bk-less-precompiled.less";
+
+// BaseKit LESS Framework is a set of non-obtrusive LESS files
+// providing CSS resets and basic styling for widgets, typography, forms etc;
+// it also includes font icons and other theme settings.
 
 
-// -----------------------------
-// 1. #LESS Includes
-// -----------------------------
+// Theme Includes
+// --------------
 
-@import "@{templateLocal}/css/reset.less"; // CSS Reset
-
-
-// -----------------------------
-// 2. #Page Settings **
-// -----------------------------
-
-// ** Styles for Baseplate template - remove when developing a custom template
-
-body {
-	background-color: #fff;
-	color: #333;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: 400;
-	font-style: normal;
-	font-size: 15px;
-	line-height: 28px;
-}
-
-// Page Container
-.container {
-	max-width: 600px;
-	margin: 0 auto;
-	padding: 100px 0 0;
-}
+@import "@{templateLocal}/less/mixins.less";     // Mixins
+@import "@{templateLocal}/less/typography.less"; // Typography
+@import "@{templateLocal}/less/theme.less";      // Theme
+@import "@{templateLocal}/less/widgets.less";    // Widgets
 
 
-// -----------------------------
-// 3. #Template Styles
-// -----------------------------
+// Plugin Includes
+// ---------------
 
-
+@import "@{templateLocal}/less/plugins/plugin-blog.less";      // Plugin: Blog CSS
+@import "@{templateLocal}/less/plugins/plugin-menu.less";      // Plugin: Menu CSS
+@import "@{templateLocal}/less/plugins/plugin-ecommerce.less"; // Plugin: Ecommerce CSS
 

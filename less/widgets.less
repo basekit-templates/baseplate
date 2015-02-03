@@ -1,0 +1,337 @@
+// --------------------------------
+// BaseKit Baseplate: CSS > Widgets
+// --------------------------------
+
+
+// -----------------------------
+// #Table Of Contents
+// -----------------------------
+
+//  1.   #Logo
+//  2.   #Company Name
+//  3.   #Navigation
+//  4.   #Feature
+
+//  5.   #Buttons
+//  5.1  -- #Standard
+//  5.2  -- #Tweet
+//  5.3  -- #Dropbox
+//  5.4  -- #Click To Call
+//  5.5  -- #Paypal
+
+//  6.   #Image
+//  7.   #Gallery
+//  8.   #Slideshow
+
+//  9.   #Contact Form
+// 10.   #Signup Form
+
+// 11.   #Social Icons
+// 12.   #Twitter Feed
+
+// 13.   #Divider (Keyline)
+// 14.   #Profile
+
+
+// -----------------------------
+// 1.  #Logo
+// -----------------------------
+
+.logo {
+    // Add styles here
+}
+
+
+
+
+// -----------------------------
+// 2.  #Company Name
+// -----------------------------
+
+.company-link {
+    // Add styles here
+}
+
+
+
+
+// -----------------------------
+// 3.  #Navigation
+// -----------------------------
+
+// Folder Item Parent: Gives arrow
+.item-name--parent:after {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    margin-left: 4px;
+    border: 5px solid transparent;
+    border-top-color: @color-swatch6;
+}
+
+
+
+
+// -----------------------------
+// 4.  #Feature
+// -----------------------------
+
+.feature {
+    // Add styles here
+}
+
+
+
+
+// -----------------------------
+// 5.  #Buttons
+// -----------------------------
+
+// All buttons inherit #Standard button styles
+
+
+//  5.1  #Standard
+//  --------------
+
+button,
+.button {
+    // Add styles here
+}
+
+//  5.2  #Tweet
+//  --------------
+
+.tweet .button {
+    // add styles here
+}
+
+//  5.4  #Dropbox
+//  --------------
+
+.dropbox .button {
+    // Add styles here
+}
+
+//  5.5  #Click to Call
+//  -------------------
+
+.phone-number-link {
+    // Add styles here
+}
+
+//  5.5  #Paypal
+//  ------------
+
+.paypalbuynow .button {
+    // Add styles here
+}
+
+
+
+
+// -----------------------------
+// 6.  #Image
+// -----------------------------
+
+// Image Captions
+// --------------
+
+// Gallery & Slideshow
+.image-title,
+.image-description {
+    color: @color-swatch1;
+}
+
+
+// Image Widget
+// ------------
+
+.imagewidget .image-title,
+.imagewidget .image-description {
+    color: @font-swatch5-color;
+}
+
+
+
+
+// -----------------------------
+// 7.  #Gallery
+// -----------------------------
+
+// The following styles give you a three column gallery layout with a
+// coloured overlay
+
+// Gallery Layout
+// --------------
+
+// Gallery List
+.gallery-list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+// Gallery Item
+.gallery .gallery-item {
+    position: relative;
+    width: 32%;
+    margin-bottom: 2%;
+    // Display 100% at mobile
+    @media @mobile {
+        width: 100%;
+        margin-bottom: 4%;
+    }
+}
+
+
+// Gallery Images
+// --------------
+
+// Use Background-image Method
+.gallery .image-link {
+    display: block;
+    height: 280px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @media @tablet {
+        height: 210px;
+    }
+}
+
+// Hide Img Element
+.gallery .image {
+    display: none;
+}
+
+
+// Gallery Image Captions
+// ----------------------
+
+// Hide Caption
+.gallery .caption {
+    display: none;
+    margin: 0;
+    padding: 20px;
+    background-color: hsla(hue(@color-swatch7), saturation(@color-swatch7), lightness(@color-swatch7), 0.8); 
+}
+
+// Show Caption
+.gallery .figure:hover .caption {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+}
+
+
+
+
+// -----------------------------
+// 8.  #Slideshow
+// -----------------------------
+
+// Slideshow Layout
+// ----------------
+
+// Slideshow Height
+.responsiveslideshow .slides-list,
+.responsiveslideshow .figure {
+    position: relative;
+    min-height: 400px;
+}
+
+
+// Slideshow Image Captions
+// ------------------------
+
+.responsiveslideshow .caption {
+
+}
+
+
+
+
+// -----------------------------
+// 9.  #Contact Form
+// -----------------------------
+
+// Global form styles are set in 'less > theme.less' (4. #Forms)
+
+.contactform {
+    // Add styles here
+}
+
+
+
+
+// -----------------------------
+// 10. #Signup Form
+// -----------------------------
+
+// Global form styles are set in 'less > theme.less' (4. #Forms)
+
+.signupform {
+    // Add styles here
+}
+
+
+
+
+// -----------------------------
+// 11. #Social Icons
+// -----------------------------
+
+.social-list {
+    // Add styles here
+}
+.social-item {
+    // Add styles here
+}
+
+
+
+
+
+// -----------------------------
+// 12. #Twitter Feed
+// -----------------------------
+
+.twitter {
+    // Add styles here
+}
+.tweet-item {
+    // Add styles here
+}
+
+
+
+
+// -----------------------------
+// 13. #Divider (Keyline)
+// -----------------------------
+
+hr.rule {
+    // Add styles here
+}
+
+
+
+
+// -----------------------------
+// 14. #Profile
+// -----------------------------
+
+// Add styles here...
+
+
