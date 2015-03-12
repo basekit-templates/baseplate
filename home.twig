@@ -1,0 +1,12 @@
+{% extends "layout.twig" %}
+{% block content %}
+
+<section class="page-header home-header">
+	{{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('assets/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
+</section>
+
+<section class="page-body home-body">
+	{{zone('main')|raw}}
+</section>
+
+{% endblock %}
