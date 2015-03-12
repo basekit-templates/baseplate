@@ -6,10 +6,10 @@
 // #Table of Contents
 // -----------------------------
 
-// 1. #SINGLE PRODUCT
-// 2. #PRODUCT LIST
-// 3. #BASKET WIDGET
-// 4. #BASKET SUMMARY
+// 1. #Single Product
+// 2. #Product List
+// 3. #Basket Widget
+// 4. #Basket Summary
 
 
 // -------------------------------
@@ -29,7 +29,7 @@
 .product-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;     
+    justify-content: space-between;
 }
 
 // Product Item
@@ -51,45 +51,58 @@
 // 3. #Basket Widget
 // -----------------------------
 
-.basket__basket-item { position: relative; }
-.basket__item-image  { width: 200px; }
+.basket-body {
+    max-width: 400px;
+    @media @mobile {
+        max-width: 100%;
+    }
+}
 
-// Display basket image and content inline
+// Image / Details positioning
 .basket-item-image,
 .basket-item-details {
     display: inline-block;
     vertical-align: top;
-    margin-right: 20px;
-    @media @tablet {
+}
+.basket-item-image {
+    width: 20%;
+    margin-right: 5%;
+    @media @mobile {
         width: 100%;
         margin-right: 0;
     }
 }
+.basket-item-details {
+    width: 73%;
+    @media @mobile {
+        width: 100%;
+    }
+}
 
-// Item Remove Button
+// Basket Product Title
+.basket-item-name {
+    display: block;
+    max-width: 90%;
+    line-height: @font-swatch5-line-height;
+    @media @mobile {
+        width: 100%;
+    }
+}
+
+
+// Remove Button
+// -------------
+
 .item-remove {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 9999;
-    // Remove icon spacing
-    &:before {
-        margin-right: 0;
-    }
 }
-// Hide button text
-.remove-text { 
-    display: none;
+.remove-text {
+    display: none; // Hide remove text
 }
 
-// Basket Image
-.basket__image {
-    max-height: 200px;
-    max-width: 200px;
-    @media @mobile {
-        max-height: inherit;
-    }
-}
+
 
 
 

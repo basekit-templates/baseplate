@@ -12,16 +12,16 @@
 //  3.   #Navigation
 //  4.   #Feature
 
-//  5.   #Image
-//  6.   #Gallery
-//  7.   #Slideshow
+//  5.   #Buttons
+//  5.1  -- #Standard
+//  5.2  -- #Tweet
+//  5.3  -- #Dropbox
+//  5.4  -- #Click To Call
+//  5.5  -- #Paypal
 
-//  8.   #Buttons
-//  8.1  -- #Standard
-//  8.2  -- #Tweet
-//  8.3  -- #Dropbox
-//  8.4  -- #Click To Call
-//  8.5  -- #Paypal
+//  6.   #Image
+//  7.   #Gallery
+//  8.   #Slideshow
 
 //  9.   #Contact Form
 // 10.   #Signup Form
@@ -37,7 +37,7 @@
 // 1.  #Logo
 // -----------------------------
 
-.company-logo {
+.logo {
     // Add styles here
 }
 
@@ -76,7 +76,7 @@
 // 4.  #Feature
 // -----------------------------
 
-.feature-widget {
+.feature {
     // Add styles here
 }
 
@@ -84,7 +84,53 @@
 
 
 // -----------------------------
-// 5.  #Image
+// 5.  #Buttons
+// -----------------------------
+
+// All buttons inherit #Standard button styles
+
+
+//  5.1  #Standard
+//  --------------
+
+button,
+.button {
+    // Add styles here
+}
+
+//  5.2  #Tweet
+//  --------------
+
+.tweet .button {
+    // add styles here
+}
+
+//  5.4  #Dropbox
+//  --------------
+
+.dropbox .button {
+    // Add styles here
+}
+
+//  5.5  #Click to Call
+//  -------------------
+
+.phone-number-link {
+    // Add styles here
+}
+
+//  5.5  #Paypal
+//  ------------
+
+.paypalbuynow .button {
+    // Add styles here
+}
+
+
+
+
+// -----------------------------
+// 6.  #Image
 // -----------------------------
 
 // Image Captions
@@ -96,16 +142,20 @@
     color: @color-swatch1;
 }
 
+
 // Image Widget
-.image-widget__image-title,
-.image-widget__image-description {
+// ------------
+
+.imagewidget .image-title,
+.imagewidget .image-description {
     color: @font-swatch5-color;
 }
 
 
 
+
 // -----------------------------
-// 6.  #Gallery
+// 7.  #Gallery
 // -----------------------------
 
 // The following styles give you a three column gallery layout with a
@@ -115,7 +165,7 @@
 // --------------
 
 // Gallery List
-.image-gallery__gallery-list {
+.gallery-list {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -128,11 +178,11 @@
     -moz-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 // Gallery Item
-.image-gallery__gallery-item {
+.gallery .gallery-item {
     position: relative;
     width: 32%;
     margin-bottom: 2%;
@@ -148,7 +198,7 @@
 // --------------
 
 // Use Background-image Method
-.image-gallery__image-link {
+.gallery .image-link {
     display: block;
     height: 280px;
     background-repeat: no-repeat;
@@ -160,7 +210,7 @@
 }
 
 // Hide Img Element
-.image-gallery__image {
+.gallery .image {
     display: none;
 }
 
@@ -169,7 +219,7 @@
 // ----------------------
 
 // Hide Caption
-.image-gallery__caption {
+.gallery .caption {
     display: none;
     margin: 0;
     padding: 20px;
@@ -177,98 +227,36 @@
 }
 
 // Show Caption
-.image-link:hover .image-gallery__caption {
+.gallery .figure:hover .caption {
     position: absolute;
-    top: 0;
+    bottom: 0;
     display: block;
     width: 100%;
-    height: 100%;
 }
 
 
 
 
 // -----------------------------
-// 7.  #Slideshow
+// 8.  #Slideshow
 // -----------------------------
 
 // Slideshow Layout
 // ----------------
 
 // Slideshow Height
-.slideshow, .slideshow__figure {
+.responsiveslideshow .slides-list,
+.responsiveslideshow .figure {
     position: relative;
     min-height: 400px;
-}
-
-
-// Slideshow Images
-// ----------------
-
-// Use Background-image Method
-.slideshow__figure {
-    background-size: cover;
-    background-position: center;
-}
-// Hide Img Element
-.slideshow__image {
-    display: none;
 }
 
 
 // Slideshow Image Captions
 // ------------------------
 
-.slideshow__caption {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 20px;
-}
+.responsiveslideshow .caption {
 
-
-
-
-// -----------------------------
-// 8.  #Buttons
-// -----------------------------
-
-// All buttons inherit #Standard button styles
-
-//  8.1  #STANDARD
-//  --------------
-
-button,
-.button {
-    // Add styles here
-}
-
-//  8.2  #TWEET
-//  --------------
-
-.tweet-button {
-    // Add styles here
-}
-
-//  8.4  #DROPBOX
-//  --------------
-
-.dropbox-button {
-    // Add styles here
-}
-
-//  8.5  #CLICK TO CALL
-//  --------------
-
-.click-to-call {
-    // Add styles here
-}
-
-//  8.5  #PAYPAL
-//  --------------
-
-.paypal-button {
-    // Add styles here
 }
 
 
@@ -280,7 +268,7 @@ button,
 
 // Global form styles are set in 'less > theme.less' (4. #Forms)
 
-.contact-form {
+.contactform {
     // Add styles here
 }
 
@@ -288,12 +276,12 @@ button,
 
 
 // -----------------------------
-// 10.  #Signup Form
+// 10. #Signup Form
 // -----------------------------
 
 // Global form styles are set in 'less > theme.less' (4. #Forms)
 
-.signup-form {
+.signupform {
     // Add styles here
 }
 
@@ -301,9 +289,12 @@ button,
 
 
 // -----------------------------
-// 11.  #Social Icons
+// 11. #Social Icons
 // -----------------------------
 
+.social-list {
+    // Add styles here
+}
 .social-item {
     // Add styles here
 }
@@ -311,10 +302,14 @@ button,
 
 
 
+
 // -----------------------------
-// 12.  #Twitter Feed
+// 12. #Twitter Feed
 // -----------------------------
 
+.twitter {
+    // Add styles here
+}
 .tweet-item {
     // Add styles here
 }
@@ -323,7 +318,7 @@ button,
 
 
 // -----------------------------
-// 13.  #Divider (Keyline)
+// 13. #Divider (Keyline)
 // -----------------------------
 
 hr.rule {
