@@ -1,0 +1,15 @@
+<header class="template-header">
+
+	<div class="header-logo">
+		{{widget('logo', 'headerlogo', {"defaultlogo": asset('images/logo.png')})|raw}}
+	</div>
+	
+	<div class="header-companyname">
+		{{widget('companyname', 'headercompanyname', {"business": "profile"})|raw}}
+	</div>
+	
+	<nav class="header-navigation">
+		{{widget('extendednavigation', 'headernavigation', {})|raw}}
+	</nav>
+	
+</header>
