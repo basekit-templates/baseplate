@@ -1,6 +1,11 @@
-Copyright 2014 BaseKit Platform Ltd
+BasePlate: Version 1 Widgets
+============================
 
-baseplate
-=========
+A starting point for creating a BaseKit template with version 1 BaseKit widgets.
 
-BaseKit Baseplate Template
+[Download latest version](https://github.com/basekit-templates/basekit-baseplate/archive/v1.zip)
+
+License
+-------
+
+This software is released under the [MIT License](http://www.opensource.org/licenses/MIT).
