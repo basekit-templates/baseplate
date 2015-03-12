@@ -2,6 +2,10 @@
     "name": "BasePlate",
     "thumbnail": "baseplate.png",
     "widgetVersion":2,
+    "images": [
+        "images/feature.jpg",
+        "images/logo.png"
+    ],
     "colorSwatches":
     {
         "Swatch 1": {

@@ -1,0 +1,85 @@
+// -----------------------------
+// 7.  #Gallery
+// -----------------------------
+
+// The following styles give you a three column gallery layout with a
+// coloured overlay
+
+
+.image-title,
+.image-description {
+    color: @color-swatch1;
+}
+
+// Gallery Layout
+// --------------
+
+// Gallery List
+.gallery-list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+// Gallery Item
+.gallery .gallery-item {
+    position: relative;
+    width: 32%;
+    margin-bottom: 2%;
+    // Display 100% at mobile
+    @media @mobile {
+        width: 100%;
+        margin-bottom: 4%;
+    }
+}
+
+
+// Gallery Images
+// --------------
+
+// Use Background-image Method
+.gallery .image-link {
+    display: block;
+    height: 280px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @media @tablet {
+        height: 210px;
+    }
+}
+
+// Hide Img Element
+.gallery .image {
+    display: none;
+}
+
+
+// Gallery Image Captions
+// ----------------------
+
+// Hide Caption
+.gallery .caption {
+    display: none;
+    margin: 0;
+    padding: 20px;
+    background-color: hsla(hue(@color-swatch7), saturation(@color-swatch7), lightness(@color-swatch7), 0.8);
+}
+
+// Show Caption
+.gallery .figure:hover .caption {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+}
