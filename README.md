@@ -1,6 +1,11 @@
-Copyright 2014 BaseKit Platform Ltd
+BasePlate: Skeleton
+===================
 
-baseplate
-=========
+A bare bones version template containing absolute essentials when creating a functional BaseKit template.
 
-BaseKit Baseplate Template
+[Download latest version](https://github.com/basekit-templates/basekit-baseplate/archive/skeleton.zip)
+
+License
+-------
+
+This software is released under the [MIT License](http://www.opensource.org/licenses/MIT).
