@@ -1,6 +1,6 @@
 {
-	"name":"Baseplate",
-	"thumbnail":"thumbnail.png",
+	"name":"BasePlate",
+	"thumbnail":"baseplate.png",
 	"templateType":"standard",
 	"tags": {
 		"en": ["basic", "simple"]
