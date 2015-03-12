@@ -3,48 +3,34 @@
 {% block content %}
 
 <!-- Container -->
-<div class="template-container">
+<div class="container">
 
-	<!-- Header Content (Template Widgets) -->
-	<header class="template-header">
-		{{widget('logo', 'headerlogo', {
-			"defaultlogo": asset('images/logo.png')
-		})|raw}}
+	<!-- Page Content -->
+	<section class="template-content">
 
-		{{widget('companyname', 'companyname', {
-			"business": "profile"
-		})|raw}}
+		<!-- Template Widgets -->
 
-		{{widget('extendednavigation', 'headernavigation', {
-			"align":"left"
-		})|raw}}
+		{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
 
-		{{widget('feature', 'headerfeature', {
-			"header": "Header Text",
-			"strapline":"Strapline text",
+		{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+
+		{{widget('extendednavigation', 'navigation', {"align":"left"})|raw}}
+
+		{{widget('feature', 'featurehome', {
+			"header": "profile",
 			"defaultBgImg": asset('images/feature-bg.jpg'),
 			'positionTopPercentage': '0',
 			'showBtn': true,
-			buttonText: "Button text"
+			buttonText: "Lorem Ipsum"
 		})|raw}}
-	</header>
-	<!-- End Header Content -->
 
-	<!-- Page Content (Zone Widgets) -->
-	<main class="template-main">
-		{{zone('main')|raw}}
-	</main>
+		<!-- End Template Widgets -->
+
+		<!-- Main Widget Zone -->
+	   	{{zone('main')|raw}}
+
+	</section>
 	<!-- End Page Content -->
-
-	<!-- Footer Content (Template Widgets) -->
-	<footer class="template-footer">
-
-		{{widget('profile', 'footercopyright', {
-			"profileType": "copyright",
-			"copyright": "Copyright ©"
-		})|raw}}
-
-	</footer>
 
 </div>
 <!-- End Container -->

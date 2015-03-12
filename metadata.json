@@ -1,8 +1,7 @@
 {
     "name": "basekit-baseplate",
     "thumbnail": "thumbnail.png",
-    "templateType":"standard",
-    "widgetVersion": 2,
+    "widgetVersion":2,
     "colorSwatches":
     {
         "Swatch 1": {
