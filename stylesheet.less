@@ -1,6 +1,35 @@
+// Copyright 2014 BaseKit Platform Ltd
+//
+// BaseKit Baseplate Template (v1.0)
+
+// Copyright 2014 BaseKit Platform Ltd
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+// 1. #LESS INCLUDES
+// 2. #PAGE SETTINGS
+// 3. #TEMPLATE STYLES
+
+
+// -----------------------------
+// 1. #LESS Includes
+// -----------------------------
+
+@import "@{templateCommon}/basekit-bootstrap.less"; // BaseKit Bootstrap
+
+// ** BaseKit LESS Framework is a set of non obtrusive LESS files that can be pulled into your template
+// to guarentee widgets come to life. Proivides default styles for all widgets. Uncomment to activate.
+
+
+// -----------------------------
+// #Swatches reference
+// -----------------------------
+
 /*	===============================
 	Colour Swatches
-	===============================	
+	===============================
 	"color1": == Background
 	"color2": == Contrast colour
 	"color3": == Button colour
@@ -12,7 +41,7 @@
 
 /*	===============================
 	Font Swatches
-	===============================	
+	===============================
 	"font1":  == Heading 1
 	"font2":  == Heading 2
 	"font3":  == Heading 3
@@ -26,14 +55,24 @@
 	=============================== */
 
 
-/*	===============================
-	Bootstrap import
-	=============================== */
-@import "@{templateCommon}/basekit-bootstrap.less";
 
-/*	===============================
-	Template Styles
-	=============================== */
+// -----------------------------
+// 2. #Page Settings
+// -----------------------------
+
+// ** Styles for Baseplate template - remove when developing a custom template
+
+body {
+	background-color: #fff;
+	color: #333;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 15px;
+	line-height: 28px;
+}
+
+// Page Container
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -43,3 +82,15 @@
 .widget {
 	clear: both;
 }
+
+// Main Zone
+.main-zone {
+	margin: 40px 0;
+}
+
+
+
+
+// -----------------------------
+// 3. #Template Styles
+// -----------------------------

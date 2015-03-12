@@ -1,6 +1,7 @@
 {
 	"name":"Baseplate",
 	"thumbnail":"thumbnail.png",
+	"templateType":"standard",
 	"tags": {
 		"en": ["basic", "simple"]
 	},
