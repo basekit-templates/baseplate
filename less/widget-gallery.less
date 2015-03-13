@@ -1,20 +1,17 @@
-// -----------------------------
-// 7.  #Gallery
-// -----------------------------
+// -------
+// gallery
+// -------
 
-// The following styles give you a three column gallery layout with a
-// coloured overlay
+// Gallery 3 column layout
+// -----------------------
 
-
+// Title and description colour
 .image-title,
 .image-description {
     color: @color-swatch1;
 }
 
-// Gallery Layout
-// --------------
-
-// Gallery List
+// Gallery list container
 .gallery-list {
     display: -webkit-box;
     display: -moz-box;
@@ -31,7 +28,7 @@
     justify-content: space-between;
 }
 
-// Gallery Item
+// Gallery items
 .gallery .gallery-item {
     position: relative;
     width: 32%;
@@ -43,11 +40,7 @@
     }
 }
 
-
-// Gallery Images
-// --------------
-
-// Use Background-image Method
+// Gallery item links
 .gallery .image-link {
     display: block;
     height: 280px;
@@ -59,16 +52,12 @@
     }
 }
 
-// Hide Img Element
+// Gallery hide img element (uses background cover technique)
 .gallery .image {
     display: none;
 }
 
-
-// Gallery Image Captions
-// ----------------------
-
-// Hide Caption
+// Gallery caption
 .gallery .caption {
     display: none;
     margin: 0;
@@ -76,7 +65,7 @@
     background-color: hsla(hue(@color-swatch7), saturation(@color-swatch7), lightness(@color-swatch7), 0.8);
 }
 
-// Show Caption
+// Gallery show caption on hover
 .gallery .figure:hover .caption {
     position: absolute;
     bottom: 0;

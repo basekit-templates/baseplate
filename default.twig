@@ -5,32 +5,32 @@
 <!-- Container -->
 <div class="container">
 
-	<!-- Page Content -->
-	<section class="template-content">
+    <!-- Page Content -->
+    <section class="template-content">
 
-		<!-- Template Widgets -->
+        <!-- Template Widgets -->
 
-		{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+        {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
 
-		{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
 
-		{{widget('extendednavigation', 'navigation', {"align":"left"})|raw}}
+        {{widget('extendednavigation', 'navigation', {"align":"left"})|raw}}
 
-		{{widget('feature', 'featurehome', {
-			"header": "profile",
-			"defaultBgImg": asset('images/feature.jpg'),
-			'positionTopPercentage': '0',
-			'showBtn': true,
-			buttonText: "Lorem Ipsum"
-		})|raw}}
+        {{widget('feature', 'featurehome', {
+            "header": "profile",
+            "defaultBgImg": asset('images/feature.jpg'),
+            'positionTopPercentage': '0',
+            'showBtn': true,
+            buttonText: "Lorem Ipsum"
+        })|raw}}
 
-		<!-- End Template Widgets -->
+        <!-- End Template Widgets -->
 
-		<!-- Main Widget Zone -->
-	   	{{zone('main')|raw}}
+        <!-- Main Widget Zone -->
+        {{zone('main')|raw}}
 
-	</section>
-	<!-- End Page Content -->
+    </section>
+    <!-- End Page Content -->
 
 </div>
 <!-- End Container -->

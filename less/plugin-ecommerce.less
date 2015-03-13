@@ -1,38 +1,18 @@
-// ------------------------------------------
-// BasePlate: CSS > Plugin: Ecommerce
-// ------------------------------------------
+// ---------
+// ecommerce
+// ---------
 
-// -----------------------------
-// #Table of Contents
-// -----------------------------
+// Product list widget
+// -------------------
 
-// 1. #Single Product
-// 2. #Product List
-// 3. #Basket Widget
-// 4. #Basket Summary
-
-
-// -------------------------------
-// 1. #Single Product
-// -------------------------------
-
-// No styles here...
-
-
-
-
-// -----------------------------
-// 2. #Product List
-// -----------------------------
-
-// Product List
+// Product list container
 .product-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-// Product Item
+// Product items in container
 .product-item {
     position: relative;
     width: 32%;
@@ -44,13 +24,10 @@
     }
 }
 
+// Basket widget
+// -------------
 
-
-
-// -----------------------------
-// 3. #Basket Widget
-// -----------------------------
-
+// Contents of basket
 .basket-body {
     max-width: 400px;
     @media @mobile {
@@ -58,12 +35,14 @@
     }
 }
 
-// Image / Details positioning
+// Image & Details positioning
 .basket-item-image,
 .basket-item-details {
     display: inline-block;
     vertical-align: top;
 }
+
+// Basket item positioning
 .basket-item-image {
     width: 20%;
     margin-right: 5%;
@@ -72,6 +51,8 @@
         margin-right: 0;
     }
 }
+
+// Basket item details positioning
 .basket-item-details {
     width: 73%;
     @media @mobile {
@@ -79,7 +60,7 @@
     }
 }
 
-// Basket Product Title
+// Basket item name positioning
 .basket-item-name {
     display: block;
     max-width: 90%;
@@ -89,27 +70,12 @@
     }
 }
 
-
 // Remove Button
-// -------------
-
 .item-remove {
     position: absolute;
     top: 0;
     right: 0;
 }
 .remove-text {
-    display: none; // Hide remove text
+    display: none; // Hides remove text
 }
-
-
-
-
-
-
-// -------------------------------
-// 4. #Basket Widget
-// -------------------------------
-
-// No styles here...
-

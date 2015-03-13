@@ -1,8 +1,8 @@
-// -----------------------------
-// 3.  #Navigation
-// -----------------------------
+// ----------
+// navigation
+// ----------
 
-// Folder Item Parent: Gives arrow
+// Parent nav items, adds arrow icon
 .item-name--parent:after {
     display: inline-block;
     vertical-align: middle;
@@ -10,4 +10,39 @@
     margin-left: 4px;
     border: 5px solid transparent;
     border-top-color: @color-swatch6;
+}
+
+// Hide toggle on desktop
+.navigation-toggle {
+    display: none;
+    &:after {
+        content: "\2630";
+    }
+    @media @tablet {
+        display: inline-block;
+    }
+}
+
+// Clears margin on ul, hides navigatio on mobile (made visible in conjunction with navigation-toggle)
+.navigation-list {
+    margin: 0;
+    @media @tablet {
+        display: none;
+        &.open {
+            display: block;
+        }
+    }
+}
+
+// Sets background colour to navigation and dropdowns
+.extendednavigation,
+.navigation-list--children {
+    background-color: darken(@color-swatch1, 10%);
+}
+
+// Sets nav items to full width on mobile and tablet
+.navigation-item {
+    @media @tablet {
+        display: block;
+    }
 }

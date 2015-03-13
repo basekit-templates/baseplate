@@ -1,63 +1,37 @@
-// BasePlate: Stylesheet
+// ---------------------
+// BasePlate main styles
+// ---------------------
 
-// ----------------
 // Template Imports
 // ----------------
+@import "@{templateCommon}/bk-less-framework.less";     // BK LESS Framework
 
-@import "@{templateCommon}/bk-less-framework.less";		// BK LESS Framework
+@import "@{templateLocal}/less/variables.less";         // Variables
 
-@import "@{templateLocal}/less/variables.less";			// Variables
-
-@import "@{templateLocal}/less/widget-gallery.less";	// Widgets
+@import "@{templateLocal}/less/widget-gallery.less";    // Widgets
 @import "@{templateLocal}/less/widget-navigation.less";
 
-@import "@{templateLocal}/less/plugin-blog.less";		// Plugins
+@import "@{templateLocal}/less/plugin-blog.less";       // Plugins
 @import "@{templateLocal}/less/plugin-menu.less";
 @import "@{templateLocal}/less/plugin-ecommerce.less";
 
 
-// ---------------
 // Template Styles
 // ---------------
+
+// Wrapping container
 .container {
     width: 90%;
     margin: 0 5%;
     @media only screen and (min-width: 1140px) {
-    	width: 960px; // 1140px - 10% for margins
-		margin: 0 auto;
-	}
+        width: 960px; // 1140px - 10% for margins
+        margin: 0 auto;
+    }
 }
 
 
-
-
-// -----------------------------
-// 2. #Header
-// -----------------------------
-
-.template-header {
-    // Add styles here
-}
-
-
-
-
-// -----------------------------
-// 3. #Footer
-// -----------------------------
-
-.template-footer {
-    // Add styles here
-}
-
-
-
-
-// -----------------------------
-// 4. #Forms
-// -----------------------------
-
-form,
-.form {
-    // Add styles here
+// Formatting all inputs and buttons so they match in size
+input, textarea, button, .button {
+    padding: 5px 12px;
+    line-height: @font-swatch7-line-height;
 }

@@ -1,34 +1,34 @@
 <!doctype html>
 <!--[if lt IE 7]>
-	<html class="no-js ie6 oldie" lang="en">
+    <html class="no-js ie6 oldie" lang="en">
 <![endif]-->
 <!--[if IE 7]>
-	<html class="no-js ie7 oldie" lang="en">
+    <html class="no-js ie7 oldie" lang="en">
 <![endif]-->
 <!--[if IE 8]>
-	<html class="no-js ie8 oldie" lang="en">
+    <html class="no-js ie8 oldie" lang="en">
 <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="{{ page.seoLang }}">
 <!--<![endif]-->
 <head>
-	<meta charset="utf-8" />
-	<title>{{ page.title }}</title>
-	<meta name="keywords" content="{{ page.keywords }}" />
-	<meta name="description" content="{{ page.description }}" />
+    <meta charset="utf-8" />
+    <title>{{ page.title }}</title>
+    <meta name="keywords" content="{{ page.keywords }}" />
+    <meta name="description" content="{{ page.description }}" />
 
-	{% if site.favicon %}
-		<link rel="icon" href="{{ site.favicon['favicon'] }}" type="image/x-icon" />
-		<link rel="SHORTCUT ICON" href="{{ site.favicon['thumbnail'] }}?v={{ "now"|date("U") }}" type="image/x-icon" />
-	{% endif %}
-	<meta name="viewport" content="width=device-width,initial-scale=1">
+    {% if site.favicon %}
+        <link rel="icon" href="{{ site.favicon['favicon'] }}" type="image/x-icon" />
+        <link rel="SHORTCUT ICON" href="{{ site.favicon['thumbnail'] }}?v={{ "now"|date("U") }}" type="image/x-icon" />
+    {% endif %}
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-	{% include basekit.headScript %}
+    {% include basekit.headScript %}
 </head>
 <body class="{{ page.backgroundClass }}">
 
-	{% block content %}
-	{% endblock %}
+    {% block content %}
+    {% endblock %}
 
     {% include basekit.bodyScript %}
 </body>
