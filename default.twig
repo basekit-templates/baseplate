@@ -12,19 +12,18 @@
 
         {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
 
-        {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-
         {{widget('extendednavigation', 'navigation', {"align":"left"})|raw}}
 
-        {{widget('feature', 'featurehome', {
-            "header": "profile",
-            "defaultBgImg": asset('images/feature.jpg'),
-            'positionTopPercentage': '0',
-            'showBtn': true,
-            buttonText: "Lorem Ipsum"
-        })|raw}}
-
         <!-- End Template Widgets -->
+        {{widget('content', 'title', {content: '<h1>BaseKit Baseplate Template</h1>'})|raw}}
+
+        {{widget('content', 'text-overview', {content: '<h2>Overview</h2><p>The BaseKit Baseplate is a minimal template for you to use as a starting point for development.</p>'})|raw}}
+
+        {{widget('content', 'text-next', {content: '<h2>What to do next</h2><p>Simply download this template via the Developer tab, delete this markup and get building.</p>'})|raw}}
+
+        {{widget('content', 'text-complete', {content: '<h2>Once you&#39;ve finished building</h2><p>Upload your template to BaseKit. For more comprehensive help visit our <a href="http://docs.basekit.com/getting-started/uploading/" target="_blank">upload your template</a> page.</p>'})|raw}}
+
+        {{widget('content', 'text-help', {content: '<h2>Help is at hand</h2><p>If you have any queries during the process, never fear! Detailed help information and a <a href="http://knowledge.basekit.com" target="_blank">discussion forum</a> can be found on our <a href="http://docs.basekit.com" target="_blank">developer documentation</a> site.</p>'})|raw}}
 
         <!-- Main Widget Zone -->
         {{zone('main')|raw}}
