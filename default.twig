@@ -1,6 +1,16 @@
 {% extends "layout.twig" %}
 
+
+
 {% block content %}
+
+  		{{widget('feature', 'featurehome', {
+            "header": "profile",
+            "defaultBgImg": asset('images/feature-bg.jpg'),
+            'positionTopPercentage': '0',
+            'showBtn': false,
+            buttonText: "Lorem Ipsum"
+        })|raw}}
 
 	{{zone('main')|raw}}
 

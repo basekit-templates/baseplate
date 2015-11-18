@@ -3,3 +3,8 @@
 	"thumbnail": "baseplate.png",
 	"widgetVersion":2
 }
+"styles": {
+	"feature": {
+		"color__feature-headline--background": "#ff0000"          
+    }
+}
