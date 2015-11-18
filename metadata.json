@@ -1,5 +1,6 @@
 {
 	"name": "BasePlate",
+	"preprocessor": "sass",
 	"thumbnail": "baseplate.png",
 	"widgetVersion":2,
 	"styles": {
