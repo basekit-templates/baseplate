@@ -1,10 +1,11 @@
 {
 	"name": "BasePlate",
 	"thumbnail": "baseplate.png",
-	"widgetVersion":2
+	"widgetVersion":2,
+	"styles": {
+		"feature": {
+			"color__feature-headline--background": "#ff0000"          
+	    }
+	}
 }
-"styles": {
-	"feature": {
-		"color__feature-headline--background": "#ff0000"          
-    }
-}
+
