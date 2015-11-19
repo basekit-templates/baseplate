@@ -24,13 +24,13 @@ img {
 //    your template to guarentee widgets come to life. Proivides default styles for all widgets.
 
 // Template Includes
-@import "@{templateLocal}/less/theme.less"; // Global styles
-@import "@{templateLocal}/less/widgets.less"; // Widgets
+@import "less/theme.less"; // Global styles
+@import "less/widgets.less"; // Widgets
 
 // Plugin Includes
-@import "@{templateLocal}/less/plugins/plugin-blog.less"; // Plugin: Blog CSS
-@import "@{templateLocal}/less/plugins/plugin-menu.less"; // Plugin: Menu CSS
-@import "@{templateLocal}/less/plugins/plugin-ecommerce.less"; // Plugin: Ecommerce CSS
+@import "less/plugins/plugin-blog"; // Plugin: Blog CSS
+@import "less/plugins/plugin-menu"; // Plugin: Menu CSS
+@import "less/plugins/plugin-ecommerce"; // Plugin: Ecommerce CSS
 
-@import "@{templateLocal}/less/variables.less";
+@import "less/variables";
 
