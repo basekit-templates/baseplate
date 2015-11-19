@@ -1,0 +1,513 @@
+// ------------------------------------------------
+// BaseKit Standard Theme: LESS > Plugin: Ecommerce
+// ------------------------------------------------
+
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+
+// 1. #SINGLE PRODUCT
+// 2. #PRODUCT LIST
+// 3. #BASKET WIDGET
+// 4. #BASKET SUMMARY
+
+
+// -------------------------------
+// 1. #Single Product
+// -------------------------------
+
+// Style for tablet and desktop
+
+.product-article {
+    @media only screen and (min-width: 450px) {
+        float: left;
+        padding: 3em;
+        width: 100%;
+        background-color: @color__ecomproduct--background;
+    }
+}
+
+// Product images
+// --------------
+
+.product-images {
+    float: left;
+    margin-bottom: 1em;
+    width: 100%;
+    @media only screen and (min-width: 900px) {
+        margin-right: 4%;
+        width: 51%;
+        text-align: center;
+    }
+    .image-link {
+        height: auto;
+        background-color: transparent;
+        background-image: none !important;
+    }
+    .image {
+        display: block;
+        vertical-align: top;
+    }
+}
+
+.product-gallery { text-align: left; }
+
+// Product Content
+// ---------------
+
+.product-content {
+    @media only screen and (min-width: 900px) {
+        display: inline-block;
+        width: 45%;
+    }
+}
+
+// Product Options
+
+.product-actions {
+    display: inline-block;
+    margin: 40px 0;
+    width: 100%;
+}
+.product-actions .form {
+    background-color: transparent;
+    legend {
+        padding: 0;
+        color: @color-swatch4;
+        background-color: transparent;
+    }
+    .form-body {
+        padding: 0;
+    }
+    .form-group {
+        margin: 20px 0;
+    }
+    select {
+        width: 100%;
+        background-color: transparent;
+    }
+    .button {
+        float: left;
+        width: 47%;
+        @media only screen and (max-width: 450px) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    @media @mobile {
+        background-color: transparent;
+    }
+}
+
+// Categories and Tags
+
+.product-attributes {
+    display: inline-block;
+    width: 100%;
+    padding: 1em;
+    margin: 0 0 40px;
+    background-color: transparent;
+    border: 2px solid darken(@color__body--background, 10%);
+}
+
+// View Basquet Button
+
+.view-basket-wrap .button {
+    float: right;
+    width: 47%;
+    text-align: center;
+    background-color: @font-swatch7-background-color-hover;
+    &:hover {
+        background-color: @font-swatch7-background-color;
+    }
+    @media only screen and (max-width: 450px) {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+// Ecom forms
+
+// Styles are set in 'less > theme.less' (4. #Forms)
+
+
+
+// -----------------------------
+// 2. #Product List
+// -----------------------------
+
+.ecomproductslist,
+.ecomfeaturedproducts {
+    text-align: center;
+}
+
+.listing-title {
+    padding: 0 0 1.8em;
+    color: @color-swatch5;
+}
+
+// Product Filter
+// --------------
+
+// Styles are set in 'less > theme.less' (4. #Forms)
+
+.listing-order {
+    padding: 20px 0 36px;
+}
+
+// Products List
+// -------------
+
+.product-list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+// Product Item
+
+.product-item {
+    position: relative;
+    width: 32%;
+    margin-bottom: 20px;
+    // Display 100% at mobile
+    @media @mobile {
+        width: 100%;
+    }
+}
+
+// Product Image
+
+.ecomproductslist,
+.ecomfeaturedproducts {
+    .product-item-image,
+    .product-item-image .image-link,
+    .product-item-image .image {
+        @media @mobile {
+            max-height: 200px;
+            height: auto;
+            line-height: normal;
+        }
+    }
+}
+
+// Product Details
+
+.ecomproductslist,
+.ecomfeaturedproducts {
+    .title-link,
+    .listing-order {
+        font-family:@font-swatch5-font-family;
+        font-size:@font-swatch5-font-size;
+        line-height:@font-swatch5-line-height;
+        font-weight: @font-swatch5-font-weight;
+        color: @font-swatch3-color;
+        letter-spacing: @font-swatch5-letter-spacing;
+    }
+}
+
+.product-item-price {
+    font-weight: 700;
+}
+
+.ecomproductslist,
+.ecomfeaturedproducts {
+    .title-link:hover {
+        color: @color__secondary;
+        text-decoration: none;
+    }
+}
+
+// Pagination
+// ----------
+
+.listing-footer {
+    display: inline-block;
+    margin: 3em 0;
+    width: 100%;
+    clear: both;
+    .listing-pagination {
+        padding-top: 20px;
+        border-top: 1px solid darken(@color__body--background, 8%);
+    }
+}
+
+.ecomproductslist .pagination-item {
+    .button {
+        padding: 0;
+        margin-right: 3px;
+        width: 26px;
+        height: 26px;
+        -webkit-border-radius: 50px;
+           -moz-border-radius: 50px;
+                border-radius: 50px;
+        color: @color-swatch5;
+        background-color: transparent;
+    }
+    &.current .button {
+        background-color: darken(@color__body--background, 8%);
+        -webkit-border-radius: 50px;
+           -moz-border-radius: 50px;
+                border-radius: 50px;
+    }
+    .button:hover {
+        color: @color__body--background;
+        background-color: @font-swatch6-color-hover;
+    }
+}
+
+
+
+// -----------------
+// Featured products
+// -----------------
+
+.ecomfeaturedproducts .listing-title {
+    padding: 1em 0 2em;
+}
+
+// One Product
+
+.ecomfeaturedproducts .products-1 {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    .product-item {
+        width: 100%;
+    }
+    .product-item-image {
+        background-color: transparent;
+        .image-link {
+            background-color: transparent;
+        }
+    }
+    .product-item-details {
+        background-color: transparent;
+        border: none;
+    }
+}
+
+// Two and Four Products
+
+.ecomfeaturedproducts .products-2,
+.ecomfeaturedproducts .products-4 {
+    .product-item {
+        width: 48%;
+        @media @mobile {
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+
+// -----------------------------
+// 3. #Basket Widget
+// -----------------------------
+
+.basket-item {
+    position: relative;
+    padding-bottom: 20px;
+    border-bottom: 1px solid darken(@color__body--background, 8%);
+}
+
+.item-image  { width: 200px; }
+
+// Display basket image and content inline
+
+.basket-item-image,
+.basket-item-details {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    @media @tablet {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+// Item Remove Button
+
+.item-remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    // Remove icon spacing
+    &:before {
+        margin-right: 0;
+    }
+}
+// Hide button text
+
+.remove-text {
+    display: none;
+}
+
+// Basket Image
+
+.basket .image {
+    max-height: 200px;
+    max-width: 200px;
+    @media @mobile {
+        max-height: inherit;
+    }
+}
+
+// Quantity Field
+
+.quantity-field {
+    background: transparent;
+    padding: 0 10px;
+}
+
+.quantity-wrap {
+    background: transparent;
+    .button--quantity {
+        width: 22px;
+        height: 22px;
+        margin: 0;
+        line-height: 0;
+    }
+    // button rounded corners
+    .quantity-minus {
+        -webkit-border-radius: 3px 0 0 3px;
+        -moz-border-radius: 3px 0 0 3px;
+        border-radius: 3px 0 0 3px;
+    }
+    .quantity-plus {
+        -webkit-border-radius: 0 3px 3px 0;
+        -moz-border-radius: 0 3px 3px 0;
+        border-radius: 0 3px 3px 0;
+    }
+    // increase button size for mobile
+    @media @mobile {
+        max-width: 50%;
+        .quantity-field {
+            height: 40px;
+            padding: 9px;
+
+        }
+        .button--quantity {
+            margin: 0;
+            width: 25%;
+            height: 40px;
+        }
+    }
+}
+
+// Basket Total
+
+.basket-total {
+    padding-bottom: 20px;
+    border-bottom: 1px solid darken(@color__body--background, 8%);
+}
+
+// View Basket Button
+
+.view-basket {
+    margin: 20px 0;
+}
+
+// -----------------------------
+// 4. #Basket Summary
+// -----------------------------
+
+
+.ecombasketsummary .summary-title {
+    padding-bottom: 35px;
+}
+
+// Table
+
+.ecombasketsummary {
+    table,
+    th,
+    td {
+        border: none;
+    }
+    .table-row {
+        border: 1px solid darken(@color__body--background, 8%);
+        &:last-child {
+            border: none;
+        }
+    }
+    th:nth-child(4) {
+        padding: 16px 12px;
+        text-align: right;
+        @media @mobile {
+            text-align: left;
+        }
+    }
+    .summary-item-link {
+        background-image: none !important;
+    }
+    .image {
+        max-height: 100px;
+    }
+}
+
+@media only screen and (max-width : 768px) and (min-width : 480px) {
+    .summary-table .cell--image {
+        max-width: 50px;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .summary-table .cell {
+        width: 100%;
+        display: inline-block;
+    }
+}
+
+.order-total,
+.summary-item-total {
+    padding: 16px 0;
+    text-align: right;
+    @media @mobile {
+        text-align: left;
+    }
+}
+
+.order-total {
+    font-weight: 700;
+    color: @color-swatch4;
+}
+
+// Your basket is empty message
+
+.ecombasketsummary .message {
+    padding-bottom: 35px;
+}
+
+

@@ -1,0 +1,257 @@
+// // Metadata variables
+
+// // colors
+// @color__primary: @color-swatch3;
+// @color__secondary: @color-swatch2;
+
+
+// // site
+// @color__body--background: @color-swatch1;
+// @color__link--text: @color__secondary;
+// @color__companyname--text: @font-swatch10-color;
+
+// // typography
+// @color__h1--text: @font-swatch1-color;
+// @color__h2--text: @font-swatch2-color;
+// @color__h3--text: @font-swatch3-color;
+// @color__h4--text: @font-swatch4-color;
+// @color__p--text: @font-swatch5-color;
+
+// // button
+// @color__button--background: @color__primary;
+// @color__button--background--hover: @color__secondary;
+// @color__button--text: @font-swatch7-color;
+
+// // navigation
+// @color__navigation--text: @font-swatch6-color;
+// @color__navigation--text--hover: @font-swatch6-color-hover;
+// @color__navigation--text--selected: @color__primary;
+
+// // feature
+// @color__feature-headline--text: @font-swatch8-color;
+// @color__feature-strapline--text: @font-swatch9-color;
+// @color__feature-button--text: @font-swatch7-color;
+// @color__feature-button--background: @color__secondary;
+// @color__feature-button--background--hover: darken(@color__secondary, 10%);
+
+// // forms
+// @color__form--background: darken(@color__body--background, 3%);
+// @color__form-legend--text: darken(@font-swatch5-color, 4%);
+// @color__form-legend--background: darken(@color__body--background, 6%);
+// @color__form-label--text: @font-swatch5-color;
+
+// // image
+// @color__image-title--text: @font-swatch3-color;
+// @color__image-description--text: @font-swatch5-color;
+
+// // twitter
+// @color__twitter-item--background: darken(@color__body--background, 2%);
+
+// // socialicons
+// @color__socialicons--icon: @color-swatch1;
+// @color__socialicons--icon--background: @font-swatch6-color;
+
+// // blog
+// @color__blogsearch-legend--background: @color__form-legend--background;
+// @color__blogsearch-legend--text: @color__form-legend--text;
+// @color__blogpostlist-article--background: transparent;
+// @color__blogpostlist-title--text: @color__secondary;
+// @color__blogpost-article--background: transparent;
+// @color__blogpost-title--text: @font-swatch1-color;
+
+// // ecommerce
+// @color__ecomproductslist-label--text: @color__form-label--text;
+// @color__ecomproductslist-product-title--text: @font-swatch3-color;
+// @color__ecomproduct--background: darken(@color__body--background, 3%);
+// @color__ecomproduct-images--background: transparent;
+// @color__ecomproduct-title--text: @font-swatch1-color;
+// @color__ecomproduct-price--text: @font-swatch3-color;
+// @color__ecombasket-button--background: @color__primary;
+// @color__ecombasket-button--background--hover: @color__secondary;
+// @color__ecombasket-button--text: @font-swatch7-color;
+
+
+// Template colour overrides
+body {
+	background-color: @color__body--background;
+}
+
+.company-link {
+	color: @color__companyname--text;
+}
+
+a {
+	color: @color__link--text;
+}
+
+h1 {
+	color: @color__h1--text;
+}
+
+h2 {
+	color: @color__h2--text;
+}
+
+h3 {
+	color: @color__h3--text;
+}
+
+h4 {
+	color: @color__h4--text;
+}
+
+p {
+	color: @color__p--text;
+}
+
+button,
+.button {
+	background-color: @color__button--background;
+	color: @color__button--text;
+	&:hover {
+		background-color: @color__button--background--hover;
+	}
+}
+
+.extendednavigation {
+	&__item-name.item-name {
+		color: @color__navigation--text;
+		&:hover {
+			color: @color__navigation--text--hover;
+		}
+	}
+	.navigation-item.selected .item-name {
+		color: @color__navigation--text--selected;
+	}
+	.navigation-list--children {
+		background-color: @color__body--background;
+	}
+}
+
+.feature {
+	.headline {
+		color: @color__feature-headline--text;
+	}
+	.strapline {
+		color: @color__feature-strapline--text;
+	}
+	.button {
+		background-color: @color__feature-button--background;
+		color: @color__feature-button--text;
+		&:hover {
+			background-color: @color__feature-button--background--hover;
+		}
+	}
+}
+
+form,
+.form {
+	legend,
+	.legend {
+		background-color: @color__form-legend--background;
+		color: @color__form-legend--text;
+	}
+	label,
+	.label {
+		color: @color__form-label--text;
+	}
+}
+
+.socialicons {
+	.social-item {
+		background-color: @color__socialicons--icon--background;
+		&:hover {
+			background-color: darken(@color__socialicons--icon--background, 10%);
+		}
+	}
+	&__social-link {
+		background-color: @color__socialicons--icon--background;
+		color: @color__socialicons--icon;
+		&::before {
+			color: @color__socialicons--icon;
+		}
+	}
+}
+
+.blogsearch {
+	&__legend.legend {
+		background-color: @color__blogsearch-legend--background;
+		color: @color__blogsearch-legend--text;
+	}
+}
+
+.blogpostlist {
+	&__post-article {
+		background-color: @color__blogpostlist-article--background;
+	}
+	&__title-link {
+		color: @color__blogpostlist-title--text;
+	}
+	.read-more {
+		background-color: @color__button--background;
+		color: @color__button--text;
+		&:hover {
+			background-color: @color__button--background--hover;
+		}
+	}
+}
+
+.blogpost {
+	&__post-article {
+		background-color: @color__blogpost-article--background;
+	}
+	&__post-title {
+		color: @color__blogpost-title--text;
+	}
+}
+
+.ecomproductslist,
+.ecomfeaturedproducts {
+	&__label.label {
+		color: @color__ecomproductslist-label--text;
+	}
+	&__product-item-title .title-link {
+		color: @color__ecomproductslist-product-title--text;
+	}
+}
+
+.ecomproduct {
+	&__image-link.image-link,
+	&__gallery-item.gallery-item {
+		background-color: @color__ecomproduct-images--background;
+	}
+	&__product-title {
+		color: @color__ecomproduct-title--text;
+	}
+	&__product-price {
+		color: @color__ecomproduct-price--text;
+	}
+	.view-basket-wrap .button {
+		background-color: @color__button--background--hover;
+	    &:hover {
+	        background-color: @color__button--background;
+	    }
+	}
+}
+.ecombasket {
+	button.button {
+		background-color: @color__ecombasket-button--background;
+		color: @color__ecombasket-button--text;
+		&:hover {
+			background-color: @color__ecombasket-button--background--hover;
+		}
+	}
+}
+
+.menu {
+	.menu-item {
+		.item-image .image-link {
+			background-color: transparent;
+		}
+		&--featured {
+			.item-image .image-link {
+				background-color: transparent;
+			}
+		}
+	}
+}

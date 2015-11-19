@@ -1,0 +1,977 @@
+// --------------------------------------
+// BaseKit Standard Theme: LESS > Widgets
+// --------------------------------------
+
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+
+//  1.   #LOGO
+//  2.   #COMPANY NAME
+//  3.   #NAVIGATION
+//  4.   #FEATURE
+
+//  5.   #IMAGES
+//  6.   #GALLERY
+//  7.   #SLIDESHOW
+
+//  8.   #BUTTONS
+//  8.1  -- #STANDARD
+//  8.2  -- #TWEET
+//  8.3  -- #DROPBOX
+//  8.4  -- #CLICK TO CALL
+//  8.5  -- #PAYPAL
+
+//  9.   #CONTACT FORM
+// 10.   #SIGNUP FORM & BLOG SEARCH
+
+// 11.   #SOCIAL ICONS
+// 12.   #TWITTER FEED
+
+// 13.   #DIVIDER (KEYLINE)
+// 14.   #PROFILE
+// 15.   #MAP
+// 16.   #YELP
+
+
+// -----------------------------
+// 1-2  #Logo & #Company Name
+// -----------------------------
+
+
+.brand {
+    text-align: center;
+    margin: 0 0 .5em;
+}
+
+.logo-image {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+a.company-link:hover {
+    text-decoration: none;
+    color: @color__secondary;
+}
+
+
+
+// -----------------------------
+// 3.  #Navigation
+// -----------------------------
+
+
+// Navigation alignment
+
+.extendednavigation {
+    &.align-left { text-align: left; }
+    &.align-right { text-align: right; }
+    &.align-center { text-align: center; }
+}
+
+// Negative margin to align navigation to zone on desktop
+
+@media only screen and (min-width: 769px) {
+    .extendednavigation {
+        margin-left: -14px;
+        margin-right: -14px;
+    }
+}
+
+// Dropdown Menu - Folder Item Parent: Gives arrow
+
+.item-name--parent:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 4px;
+    border: 5px solid transparent;
+    border-top-color: @font-swatch6-color;
+}
+
+.item-name--parent:hover:after {
+    border-top-color: @font-swatch6-color-hover;
+}
+
+// Selected nav item
+
+.navigation-item.selected > .item-name { color: @font-swatch6-color-hover; }
+
+// Folder
+
+.navigation-list--children {
+    left: inherit;
+    right: 0;
+    width: auto;
+    min-width: 200px;
+    white-space: normal;
+    border: 1px solid darken(@color__body--background, 7%);
+    // Padding for folder list and folder items on desktop
+    @media only screen and (min-width: 769px) {
+        padding: 7px 0;
+        .item-name {
+            padding: 7px 14px;
+        }
+    }
+    @media @tablet {
+        width: 100%;
+    }
+}
+
+
+// Collapsible navigation
+// ----------------------
+// MISSING CLASS IN THE TOGGLE WHEN YOU CLICK ON IT.
+// A SCRIPT FOR THE TOGGLE TO WORK HAS BEEN ADDED TO LAYOUT.TWIG
+
+
+.navigation-toggle {
+    display: none;
+}
+
+@media @tablet {
+    .navigation-toggle {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        height: 45px;
+        text-indent: 1000px;
+        line-height: 0;
+        background-color: darken(@color__body--background, 7%);
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        outline: 0;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 3px;
+            top: 0;
+            left: 50%;
+            right: 0;
+            margin-top: 15px;
+            margin-left: -13px;
+            background: @font-swatch6-color-hover;
+            box-shadow: 0 6px 0 @font-swatch6-color-hover;
+            .transition( all, 0.5s, ease );
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 3px;
+            top: 12px;
+            left: 50%;
+            right: 0;
+            margin-top: 15px;
+            margin-left: -13px;
+            background: @font-swatch6-color-hover;
+            .transition( all, 0.5s, ease );
+        }
+    }
+    .navigation-toggle:hover {
+        background-color: @font-swatch6-color-hover;
+            &:before {
+                background: @color__body--background;
+                box-shadow: 0 6px 0 @color__body--background;
+            }
+            &:after {
+                background: @color__body--background;
+            }
+    }
+    // Toggle Button Open State
+    .open & {
+        &.navigation-toggle {
+            background-color: @font-swatch6-color-hover;
+            &:before {
+                margin-top: 21px;
+                background: @color__body--background;
+                box-shadow: none;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+                .transition( all, 0.5s, ease );
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                width: 26px;
+                height: 3px;
+                top: 0;
+                left: 50%;
+                right: 0;
+                margin-top: 21px;
+                margin-left: -13px;
+                background: @color__body--background;
+                box-shadow: none;
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                .transition( all, 0.5s, ease );
+            }
+        }
+    }
+    .navigation-body {
+        display: none;
+        .open & {
+            display: block;
+        }
+    }
+    .navigation-item {
+        width: 100%;
+        border-bottom: 1px solid darken(@color__body--background, 7%);
+    }
+}
+
+
+
+// -----------------------------
+// 4.  #Feature
+// -----------------------------
+
+.feature {
+    margin-bottom: 3em;
+    @media @tablet {
+        margin-bottom: 2.5em;
+    }
+    &:before {
+        content: " ";
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        border: 1px solid hsla(hue(@color__body--background),
+                               saturation(@color__body--background),
+                               lightness(lighten(@color__body--background,10%)),
+                               0.15);
+    }
+    .background-image,
+    .content-wrap {
+        min-height: 500px;
+        height: 500px;
+    }
+    .background-image {
+        display: table;
+        width: 100%;
+        background-size: cover;
+    }
+    .content-wrap {
+        position: relative;
+        width: 100%;
+        vertical-align: middle;
+        display: table-cell;
+        text-align: center;
+        background-color: rgba(0,0,0,0.1);
+        border: 20px solid rgba(255,255,255,0.1);
+    }
+    .headline {
+        font-family: @font-swatch8-font-family;
+        color: @font-swatch8-color;
+        font-size: @font-swatch8-font-size;
+        font-weight: @font-swatch8-font-weight;
+        line-height: @font-swatch8-line-height;
+    }
+    .strapline {
+        font-family: @font-swatch9-font-family;
+        color: @font-swatch9-color;
+        font-size: @font-swatch9-font-size;
+        font-weight: @font-swatch9-font-weight;
+        line-height: @font-swatch9-line-height;
+    }
+    .button {
+        margin: 1em 0;
+        border-bottom: 3px solid darken(@font-swatch7-background-color-hover, 10%);
+        background-color: darken(@font-swatch7-background-color-hover, 4%);
+    }
+    .button:hover {
+        border-bottom: 3px solid darken(@font-swatch7-background-color, 8%);
+        background-color: @font-swatch7-background-color;
+    }
+}
+
+// Feature Image and Text Size on Tablet
+@media @tablet {
+    .feature {
+        .background-image,
+        .content-wrap {
+            min-height: 350px;
+            height: 350px;
+        }
+        .headline {
+            font-size: bkscale(@font-swatch8-font-size, .8);
+            line-height: bkscale(@font-swatch8-line-height, .8);
+        }
+        .strapline {
+            font-size: bkscale(@font-swatch9-font-size, .9);
+            line-height: bkscale(@font-swatch9-line-height, .9);
+        }
+    }
+}
+
+// Feature Image and Text Size on Mobile
+@media @mobile {
+    .feature {
+        .background-image,
+        .content-wrap {
+            min-height: 250px;
+            height: 250px;
+        }
+        .content-wrap {
+            padding: 15px;
+        }
+        .headline {
+            font-size: bkscale(@font-swatch8-font-size, .6);
+            line-height: bkscale(@font-swatch8-line-height, .6);
+        }
+        .strapline {
+            font-size: bkscale(@font-swatch9-font-size, .8);
+            line-height: bkscale(@font-swatch9-line-height, .8);
+        }
+    }
+}
+
+
+
+
+// -----------------------------
+// 5.  #Images
+// -----------------------------
+
+
+// Image Captions
+// --------------
+
+// Image Widget
+.imagewidget__image-title {
+    color: @color__image-title--text;
+}
+.imagewidget__image-description {
+    color: @color__image-description--text;
+}
+
+
+
+// -----------------------------
+// 6.  #Gallery
+// -----------------------------
+
+
+// The following styles give you a three column gallery layout with a
+// coloured overlay
+
+
+// Gallery Layout
+// --------------
+
+// Gallery List
+.gallery-list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: -2%;
+}
+
+// Gallery Item
+.gallery__gallery-item {
+    position: relative;
+    width: 32%;
+    margin-bottom: 2%;
+    // Display 100% at mobile
+    @media @mobile {
+        width: 100%;
+        margin-bottom: 4%;
+    }
+}
+
+
+// Gallery Images
+// --------------
+
+// Use Background-image Method
+.gallery__image-link {
+    display: block;
+    height: 280px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @media @tablet {
+        height: 210px;
+    }
+}
+
+.gallery__caption {
+    .caption-link:hover {
+        text-decoration: none;
+    }
+    .image-title,
+    .image-description {
+        &:hover {
+            color: @color__secondary;
+        }
+    }
+    @media @tablet {
+        padding: 10px;
+        .image-title,
+        .image-description {
+            font-size: bkscale(@font-swatch5-font-size, .9);
+            line-height: bkscale(@font-swatch5-line-height, .9);
+        }
+    }
+}
+
+// Gallery Images in Responsive Columns
+
+// Two Columns
+.columns-two-left,
+.columns-two-right {
+    .gallery__image-link {
+        height: 150px;
+        @media @tablet {
+            height: 107px;
+        }
+        @media @mobile {
+            height: 200px;
+        }
+    }
+    .gallery__caption {
+        padding: 10px;
+        // hide description on desktop
+        @media only screen and (min-width: 768px) {
+            .image-description {
+                display: none;
+            }
+        }
+    }
+    // hide caption on tablet only
+    @media only screen and (max-width : 768px) and (min-width : 480px) {
+        .gallery__figure:hover .gallery__caption {
+            display: none;
+        }
+    }
+}
+// Three Columns
+.columns-three-left,
+.columns-three-middle,
+.columns-three-right {
+    .gallery__image-link {
+        height: 95px;
+        @media @tablet {
+            height: 69px;
+        }
+        @media @mobile {
+            height: 200px;
+        }
+    }
+    // hide caption on desktop and tablet
+    @media only screen and (min-width: 480px) {
+        .gallery__figure:hover .gallery__caption {
+            display: none;
+        }
+    }
+}
+// Four Columns
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth {
+    .gallery__image-link {
+        height: 69px;
+        @media @tablet {
+            height: 107px;
+        }
+        @media @mobile {
+            height: 200px;
+        }
+    }
+    // hide caption on desktop and tablet
+    @media only screen and (min-width: 480px) {
+        .gallery__figure:hover .gallery__caption {
+            display: none;
+        }
+    }
+}
+
+
+
+// Hide Img Element
+.gallery__image { display: none; }
+
+
+// Gallery Image Captions
+// ----------------------
+
+// Hide Caption
+.gallery__caption {
+    display: none;
+    margin: 0;
+    padding: 20px;
+    background-color: hsla(hue(@color__body--background),
+                           saturation(@color__body--background),
+                           lightness(@color__body--background), 0.8);
+    border: 1px solid darken(@color__body--background, 5%);
+}
+
+.gallery__image-title { color: @color-swatch4; }
+
+.gallery__image-description { color: @color-swatch5; }
+
+// Show Caption
+.gallery__figure:hover .gallery__caption {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    a:hover {
+        text-decoration: none;
+        .image-title,
+        .image-description {
+            color: @color__secondary;
+        }
+    }
+}
+
+
+
+
+// -----------------------------
+// 7.  #Slideshow
+// -----------------------------
+
+
+// Slideshow Layout
+// ----------------
+
+// Slideshow Height
+.slides-list,
+.responsiveslideshow .figure {
+    position: relative;
+    min-height: 400px;
+    @media @tablet {
+        min-height: 300px;
+    }
+    @media @mobile {
+        min-height: 200px;
+    }
+}
+
+// Slideshow Images
+// ----------------
+
+// Use Background-image Method
+.responsiveslideshow .figure {
+    background-size: cover;
+    background-position: center;
+}
+// Hide Img Element
+.responsiveslideshow .image { display: none; }
+
+// Slideshow Image Captions
+// ------------------------
+
+.responsiveslideshow .caption {
+    position: absolute;
+    bottom: 0;
+    width: auto;
+    padding: 20px;
+    background-color: none;
+    @media @tablet {
+        padding: 10px;
+    }
+    .image-title,
+    .image-description {
+        color: @color__body--background;
+        @media @tablet {
+            font-size: bkscale(@font-swatch5-font-size,0.9);
+            line-height: bkscale(@font-swatch9-line-height,0.9);
+        }
+        @media @mobile {
+            font-size: bkscale(@font-swatch5-font-size,0.8);
+            line-height: bkscale(@font-swatch9-line-height,0.8);
+        }
+    }
+}
+
+// Slideshow Navigation
+// --------------------
+
+.slide-navigation {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: flex-end;
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    .button.icon:before,
+    .button.icon:after {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    // Removes button text
+    .control-text {
+        display: none;
+    }
+    // Same height as images
+    min-height: 400px;
+    @media @tablet {
+        min-height: 300px;
+    }
+    @media @mobile {
+        min-height: 200px;
+    }
+}
+
+// Slideshow Navigation for Tablet and Desktop
+@media only screen and (min-width:480px) {
+    .slide-navigation {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        .button {
+            color: @color__body--background;
+            padding: 0;
+            outline: 0;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+        }
+        .button:hover {
+            color: @font-swatch6-color-hover;
+            background-color: transparent;
+        }
+        .previous-button,
+        .next-button,
+        .pause-toggle {
+            position: absolute;
+            top: 0;
+            width: 30px;
+            height: 100%;
+            background-color: transparent;
+        }
+        .previous-button {
+            left: 0;
+        }
+        .next-button {
+            right: 0;
+        }
+        .pause-toggle {
+            right: 48%;
+        }
+    }
+}
+
+// Centre pause button
+.slide-navigation .pause-toggle {
+    margin: 0 auto;
+}
+
+// Slideshow Navigation for Mobile
+@media only screen and (max-width:480px) {
+    .slide-navigation {
+        margin: 20px 0;
+        min-height: 0;
+    }
+}
+
+
+// Slideshow Pagination
+// --------------------
+
+.slide-pagination {
+    position: relative;
+}
+
+.slide-pagination .pagination-list {
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    .pagination-item {
+        margin: 0 2px;
+        display: inline-block;
+    }
+    .button {
+        width: 8px;
+        height: 8px;
+        padding: 0;
+        text-indent: -9999px;
+        overflow: hidden;
+        box-shadow: none;
+        -webkit-border-radius: 50px;
+           -moz-border-radius: 50px;
+                border-radius: 50px;
+        background-color: darken(@color__body--background, 20%);
+    }
+    .pagination-item.selected .button {
+        background-color: @color-swatch4;
+    }
+}
+
+
+// -----------------------------
+// 8.  #Buttons
+// -----------------------------
+
+// All buttons inherit #Standard button styles
+
+//  8.1  #Standard
+//  --------------
+
+button,
+.button {
+    padding: 9px 18px;
+    .border-radius(3px);
+    .transition( all, 0.5s, ease );
+    cursor: pointer;
+    &:hover {
+    }
+}
+
+.click-to-call .icon:before {
+    margin-left: 2px;
+}
+
+
+//  8.5  #Paypal
+//  ------------
+
+.paypalbuynow form {
+    margin-bottom: 0;
+}
+
+
+// -----------------------------
+// 9.  #Contact Form
+// -----------------------------
+
+// Global form styles are set in 'less > theme.less' (4. #Forms)
+
+
+// --------------------------------
+// 10.  #Signup Form & #Blog Search
+// --------------------------------
+
+
+// Styles are set in 'less > theme.less' (4. #Forms)
+
+
+// -----------------------------
+// 11.  #Social Icons
+// -----------------------------
+
+.social-item {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    background-color: @font-swatch6-color;
+    width: 28px;
+    height: 28px;
+    margin-right: 3px;
+    text-align: center;
+    &:hover {
+        background-color: @font-swatch6-color-hover;
+    }
+    .social-link {
+        display: inline-block;
+        padding: 5px 8px 6px;
+        color: @color__socialicons--icon;
+        &:before {
+            margin-right: 0;
+            font-size: 14px;
+            color: @color__socialicons--icon;
+        }
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .social-name {
+        display: none;
+    }
+}
+
+
+
+
+// -----------------------------
+// 12.  #Twitter Feed
+// -----------------------------
+
+.tweet-item {
+    background-color: @color__twitter-item--background;
+    border: 2px solid darken(@color__twitter-item--background, 6%);
+    padding: 2em;
+    p {
+        padding-bottom: 0;
+    }
+    .avatar {
+        max-width: 17%;
+        margin-right: 2%;
+    }
+    .tweet-wrap {
+        max-width: 80%;
+    }
+    .avatar, .tweet-wrap {
+        display: inline-block;
+        vertical-align: top;
+        @media @mobile {
+            max-width: 100%;
+            width: auto;
+            margin: 0 auto;
+        }
+    }
+    .account-link {
+        font-family: @font-swatch5-font-family;
+        color: @color__secondary;
+        font-size: @font-swatch5-font-size;
+        font-weight: @font-swatch5-font-weight;
+        line-height: @font-swatch5-line-height;
+    }
+    .tweet-metadata {
+        font-size: 90%;
+        .timestamp, .via {
+            color: lighten(@color-swatch5, 15%)
+        }
+    }
+    .timestamp {
+        margin-right: 5px;
+    }
+}
+
+
+
+
+// -----------------------------
+// 13.  #Divider (Keyline)
+// -----------------------------
+
+hr.rule {
+    height: 3px;
+    background-color: darken(@color__body--background, 8%);
+}
+
+
+// Horizontal rule in blog posts
+hr {
+    height: 2px;
+    border: 0;
+    margin-bottom: 18px;
+    background-color: darken(@color__body--background, 8%);
+}
+
+
+
+// -----------------------------
+// 14. #Profile
+// -----------------------------
+
+.profile {
+    text-align: center;
+    @media only screen and (min-width: 678px) {
+        padding: 0 8em 0;
+    }
+    h1,h2,h3,p {
+        font-family: @font-swatch5-font-family;
+        color: @font-swatch5-color;
+        font-size: @font-swatch5-font-size;
+        font-weight: @font-swatch5-font-weight;
+        line-height: @font-swatch5-line-height;
+    }
+    // Twitter
+    .tweet-item {
+        padding: 0;
+        padding-left: 0;
+        margin: 0 auto;
+        background-color: @color__body--background;
+        border: none;
+        max-width: 100%;
+    }
+    .avatar-image { display: none; }
+
+    // Social Icons
+    .social-list {
+        margin-top: 18px;
+    }
+
+    // Address
+    .address-line {
+        padding-bottom: 0;
+    }
+    // Profile Signup Form: Styles are set in 'less > theme.less' (4. #Forms)
+}
+
+// Phone number for tablet and desktop styled as normal paragraph text
+@media only screen and (min-width: 481px) {
+    .profile a.phone-number-link {
+        color: @color-swatch5;
+        &:hover {
+            text-decoration: none;
+            cursor: default;
+        }
+    }
+}
+
+
+
+
+// -----------------------------
+// 15.  #Map
+// -----------------------------
+
+
+.bk-map.map.widget__map {
+    height: auto;
+}
+
+
+
+
+// -----------------------------
+// 16.  #Yelp
+// -----------------------------
+
+
+.yelpreview ul {
+    list-style: none;
+    margin: 16px 0;
+}

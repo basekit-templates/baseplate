@@ -1,0 +1,417 @@
+// ------------------------------------
+// BaseKit Standard Theme: LESS > Theme
+// ------------------------------------
+
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+
+// 1. #HEADER
+// 2. #FOOTER
+// 3. #TYPOGRAPHY
+// 4. #FORMS
+
+
+
+
+// -----------------------------
+// 1. #Header
+// -----------------------------
+
+
+.theme-header {
+    padding: 1.5em 0 3em;
+    @media @tablet {
+        padding: 3em 0 2.5em;
+    }
+}
+
+// Default Page
+// ------------
+
+.theme-default {
+    .theme-header {
+        border-bottom: 3px solid darken(@color__body--background, 8%);
+        margin-bottom: 2.5em;
+    }
+}
+
+
+// -----------------------------
+// 2. #Footer
+// -----------------------------
+
+
+.theme-footer {
+    border-top: 3px solid darken(@color__body--background, 8%);
+    margin: 4em 0 2em;
+    padding: 2em 0 0;
+}
+
+
+// -----------------------------
+// 4. #Forms
+// -----------------------------
+
+// Global style
+// ------------
+
+form,
+.form {
+    margin-bottom: 1em;
+    background-color: @color__form--background;
+    .border-radius(3px);
+    .button {
+        min-height: 44px;
+        outline: none;
+    }
+}
+
+legend {
+    width: 100%;
+    padding: 10px 40px;
+    -webkit-border-radius: 3px 3px 0 0;
+       -moz-border-radius: 3px 3px 0 0;
+            border-radius: 3px 3px 0 0;
+    font-family: @font-swatch3-font-family;
+    font-size: bkscale(@font-swatch3-font-size,0.8);
+    line-height: bkscale(@font-swatch3-line-height,0.9);
+    color: darken(@font-swatch5-color, 4%);
+    background-color: @color__form-legend--background;
+    font-weight: 700;
+    @media @mobile {
+        padding: 20px;
+    }
+}
+
+.form-body {
+    padding: 20px 40px 30px;
+    @media @mobile {
+        padding: 20px;
+    }
+}
+
+input[type="search"],
+input[type="email"],
+input[type="password"],
+textarea,
+.input--single-line {
+    min-height: 44px;
+    border: 2px solid darken(@color__body--background, 10%);
+    -webkit-appearance: none;
+    -webkit-border-radius: 3px 3px 0 0;
+       -moz-border-radius: 3px 3px 0 0;
+            border-radius: 3px 3px 0 0;
+}
+
+select {
+    height: 44px;
+    border: 2px solid darken(@color__body--background, 10%);
+    background-color: #ffffff;
+    width: 100%;
+}
+
+code,
+pre,
+th {
+    background-color: transparent;
+}
+
+pre,
+table,
+th,
+td {
+    border: 2px solid darken(@color__body--background, 10%);
+}
+
+
+
+// Signup Form
+// Blog Search
+// Product Search
+// --------------------------------
+
+
+// Style for tablet and desktop
+@media only screen and (min-width : 480px) {
+    .signupform__form-body,
+    .blogsearch__form-body,
+    .ecomproductslist__form-body {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-pack: justify;
+        -moz-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-box-align: end;
+        -moz-box-align: end;
+        -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+    }
+
+    .signupform__form-group:first-child,
+    .blogsearch__form-group:first-child {
+        -ms-flex: 0 11 100%;
+        -webkit-flex: 0 11 100%;
+        flex: 0 11 100%;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+    }
+
+    .ecomproductslist__form-group {
+        margin-bottom: 0;
+    }
+
+    .fieldset--search .form-group:first-child {
+        -ms-flex: 1 1 auto;
+        -webkit-flex: 1 1 auto;
+        flex: 1 1 auto;
+        -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+        align-self: flex-start;
+    }
+
+    .fieldset--search .form-group:last-child {
+        -ms-flex: 0 1 auto;
+        -webkit-flex: 0 1 auto;
+        flex: 0 1 auto;
+        -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+        align-self: flex-start;
+    }
+
+    .form .button {
+        &.signupform__button,
+        &.blogsearch__button,
+        &.ecomproductslist__button {
+            min-height: 44px;
+            padding: 0 18px;
+            margin-left: 10px;
+            white-space: nowrap;
+        }
+    }
+}
+
+
+
+// Blog Search
+// --------------------------------
+
+.blogsearch {
+    label {
+        display: none;
+    }
+    .form-body {
+        -webkit-box-align: start;
+        -moz-box-align: start;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        padding: 30px 40px;
+        @media @mobile {
+            padding: 20px;
+        }
+    }
+    .form .button.blogsearch__button {
+        vertical-align: top;
+    }
+    .form-group {
+        margin-bottom: 0;
+        vertical-align: top;
+    }
+    @media @mobile {
+        .form-group .input {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+// Profile Signup Form
+// --------------------------------
+
+.profile .signupform {
+    .legend { background-color: @color__form-legend--background; }
+    .form-body { padding: 15px 30px 20px; }
+    // Label for tablet and desktop
+    .label {
+        @media only screen and (min-width: 481px) {
+            float: left;
+        }
+    }
+    // Input text align for mobile
+    .form input[type="email"] {
+        @media @mobile {
+            text-align: center;
+        }
+    }
+    @media @mobile {
+        .form-group:first-child {
+            margin-bottom: 10px;
+        }
+        .form-group:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .form .button {
+        @media only screen and (min-width : 480px) {
+            margin-left: 10px;
+        }
+    }
+}
+
+
+
+// Ecom forms
+// --------------------------------
+
+.form {
+    &.product__form,
+    &.summary-form {
+        padding: 0;
+        margin-bottom: 0;
+        background-color: transparent;
+        legend {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+// Product Filters
+
+.product-filters .form-group {
+    margin-right: 0;
+}
+
+.product-filters .form {
+    text-align: left;
+    .fieldset--search .ecomproductslist__legend {
+        display: none;
+    }
+    .legend {
+        display: none;
+        padding: 10px 20px;
+        text-align: center;
+        font-weight: 400;
+        background-color: @color__form-legend--background;
+    }
+    .fieldset--search .label {
+        display: none;
+    }
+    .fieldset--search .form-body {
+        padding: 30px 30px 15px;
+    }
+    .fieldset--filters .form-body {
+        padding: 15px 30px 30px;
+    }
+    .form-body {
+        background-color: darken(@color__body--background, 3%);
+    }
+    @media @mobile {
+        .input--search {
+            margin-bottom: 20px;
+        }
+        .form-group,
+        .select,
+        .button {
+            width: 100%;
+        }
+    }
+}
+
+// Clear button
+
+.product-filters .form .button.button--clear {
+    white-space: nowrap;
+    margin-left: 13px;
+    text-align: center;
+    @media @mobile {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+// Style for tablet and desktop
+@media only screen and (min-width : 480px) {
+    .ecomproductslist .fieldset--filters .form-group {
+        -ms-flex: 1 1 25%;
+        -webkit-flex: 1 1 25%;
+        flex: 1 1 25%;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+        .select {
+            width: 100%;
+        }
+    }
+}
+
+
+// Responsive Columns
+// --------------------------------
+
+// Three Columns
+.columns-three-left,
+.columns-three-middle,
+.columns-three-right,
+// Four Columns
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth {
+    legend {
+        padding: 20px 30px;
+        @media @mobile {
+            padding: 20px;
+        }
+    }
+    .signupform__form-body,
+    .blogsearch__form-body,
+    .ecomproductslist__form-body  {
+        display: block;
+        padding: 20px 30px;
+        @media @mobile {
+            padding: 20px;
+        }
+    }
+    .form .button {
+        &.signupform__button,
+        &.blogsearch__button,
+        &.ecomproductslist__button {
+            margin-left: 0;
+            .border-radius(3px);
+        }
+    }
+    .blogsearch .form-group .input {
+        margin-bottom: 20px;
+    }
+}
+
+
+

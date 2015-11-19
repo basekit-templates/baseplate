@@ -1,0 +1,193 @@
+// -------------------------------------------
+// BaseKit Standard Theme: LESS > Plugin: Menu
+// -------------------------------------------
+
+
+// Menu sections
+// -------------
+
+
+.menusections-body {
+    padding: 0 0 2em;
+    text-align: center;
+    border-bottom: 3px solid darken(@color__body--background, 8%);
+    @media only screen and (max-width: 550px) {
+        padding: 0;
+    }
+}
+
+.menusections-list {
+    display: table;
+    width: 100%;
+    margin: 0;
+}
+
+.menusections-item {
+    display: inline-block;
+    padding-right: 20px;
+    @media only screen and (max-width: 550px) {
+        padding: 15px 0 10px 0;
+        width: 100%;
+        border-bottom: 1px solid darken(@color__body--background,7%);
+    }
+    &:last-child {
+        padding-right: 0;
+        @media only screen and (max-width: 550px) {
+            border-bottom: 1px solid darken(@color__body--background,7%);
+        }
+    }
+}
+
+
+// Menu
+// -------------
+
+.menu-items:not(.menu-section--subsection),
+.menu-list {
+    @media only screen and (max-width: 600px) {
+        column-count: 1;
+        column-gap: 0;
+        -moz-column-count: 1;
+        -moz-column-gap: 0;
+        -webkit-column-count: 1;
+        -webkit-column-gap: 0;
+    }
+}
+
+.menu-item {
+    width: 100%;
+}
+
+.section-header {
+    padding: 2em 0;
+    text-align: center;
+    .section-title {
+        display: inline-block;
+        padding: .7em 1.5em;
+        margin: .5em;
+        background-color: darken(@color__body--background, 3%);
+        border-bottom: 3px solid darken(@color__body--background, 10%);
+    }
+}
+
+.section-subtitle {
+    font-family: @font-swatch5-font-family;
+    color: @font-swatch5-color;
+    font-size: @font-swatch5-font-size;
+    font-weight: @font-swatch5-font-weight;
+    line-height: @font-swatch5-line-height;
+}
+
+.menu-section--subsection .section-title {
+    padding: 0;
+    border-bottom: 0;
+    background-color: transparent;
+}
+
+// Item Image
+
+.menu .item-image {
+    width: 100%;
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+.menu {
+    .menu-section--featured .menu-item--featured .item-image .image-link,
+    .item-image .image-link {
+        height: 240px;
+        line-height: 240px;
+        @media only screen and (max-width: 1024px) {
+            height: 229px;
+            line-height: 229px;
+        }
+        @media only screen and (max-width: 960px) {
+            height: 215px;
+            line-height: 215px;
+        }
+        @media only screen and (max-width: 900px) {
+            height: 200px;
+            line-height: 200px;
+        }
+        @media @tablet {
+            height: 167px;
+            line-height: 167px;
+        }
+        @media @mobile {
+            height: 152px;
+            line-height: 152px;
+        }
+    }
+    .menu-item--featured .item-image .image-link {
+        height: 213px;
+        line-height: 213px;
+        @media only screen and (max-width: 1024px) {
+            height: 208px;
+            line-height: 208px;
+        }
+        @media only screen and (max-width: 960px) {
+            height: 130px;
+            line-height: 130px;
+        }
+        @media only screen and (max-width: 900px) {
+            height: 179px;
+            line-height: 179px;
+        }
+        @media @tablet {
+            height: 146px;
+            line-height: 146px;
+        }
+    }
+}
+
+// Item Price
+
+.item-price {
+    padding: 10px 0;
+    font-family: @font-swatch3-font-family;
+    color: @font-swatch3-color;
+    font-size: @font-swatch3-font-size;
+    font-weight: @font-swatch3-font-weight;
+    line-height: @font-swatch3-line-height;
+}
+
+// Promoted Item
+
+.menu .menu-item--featured {
+    padding: 1.5em;
+    border: 1px solid darken(@color__body--background, 10%);
+    background-color: darken(@color__body--background, 2%);
+    .item-image .image-link {
+        background-color: transparent;
+    }
+}
+
+// Promoted Subsection
+
+.menu-section--featured {
+    padding: 1.5em;
+    margin-top: 10px;
+    border: 1px solid darken(@color__body--background, 10%);
+    background-color: darken(@color__body--background, 2%);
+    .section-header {
+        border-bottom: 1px solid darken(@color__body--background, 10%);
+        margin: 0 0 2em;
+    }
+}
+
+// Dietary icons
+
+.dietary-item.icon:not(.icon--not-spicy) {
+    &:before {
+        content: "\2713";
+        margin-right: 0;
+        color: @color__secondary;
+    }
+}
+
+// Section footer
+
+.menu__section-footer {
+    margin-top: 20px;
+    text-align: center;
+}
